@@ -4,7 +4,8 @@
   "description": "mise en patique de mes connaissance",
   "main": "index.js",
   "scripts": {
-    "test": "ls"
+    "test": "ls",
+    "sass" : "sass public/design/scss/style.scss public/design/css/style.css --watch"
   },
   "repository": {
     "type": "git",
