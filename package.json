@@ -1,0 +1,19 @@
+{
+  "name": "pratique_e-commerce",
+  "version": "1.0.0",
+  "description": "mise en patique de mes connaissance",
+  "main": "index.js",
+  "scripts": {
+    "test": "ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylla156/pratique_e-commerce.git"
+  },
+  "author": "sylla ibrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sylla156/pratique_e-commerce/issues"
+  },
+  "homepage": "https://github.com/sylla156/pratique_e-commerce#readme"
+}

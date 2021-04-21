@@ -1,0 +1,11 @@
+{
+    "name": "sylla/pratique_e-commerce",
+    "description": "mise en pratique de mes connaissance",
+    "authors": [
+        {
+            "name": "sylla",
+            "email": "s67986601@gmail.com"
+        }
+    ],
+    "require": {}
+}
