@@ -1,4 +1,41 @@
+@import "./module/_mixin";
+
+//=== === === === === === === === === ===
+
 body {
     padding: 0px;
     margin: 10px;
+}
+
+//=== === === === === === === === === ===
+
+.main {
+
+    &__header {
+        // #code of header
+        @include flex(space-between);
+
+
+        &--title {
+            // #code of title
+            flex: 3;
+            @include flex(flex-start);
+        }
+
+
+        &--nav {
+            // #code of nav
+            flex: 1.5;
+            @include flex(space-around,center);
+
+            a {
+                text-decoration: none;
+                font-style: italic;
+
+            }
+        }
+
+    }
+
+
 }

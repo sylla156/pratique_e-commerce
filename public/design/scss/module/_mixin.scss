@@ -1,0 +1,10 @@
+
+/// @author sylla ibrahim
+/// @param {string} $justifyContent [center] pour le justify content
+/// @param {string} $alignItems [center] pour align items
+@mixin  flex($justifyContent : center,$alignItems : center) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    @content;
+}

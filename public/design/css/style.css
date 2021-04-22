@@ -3,4 +3,26 @@ body {
   margin: 10px;
 }
 
+.main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__header--title {
+  flex: 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main__header--nav {
+  flex: 1.5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main__header--nav a {
+  text-decoration: none;
+  font-style: italic;
+}
+
 /*# sourceMappingURL=style.css.map */
