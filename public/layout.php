@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design/css/style.css">
     <title><?php echo $title_of_references ?? "erreur1" ?></title>
 </head>
 
@@ -12,7 +13,7 @@
     <main class="main">
 
         <header class="main__header">
-            <h3 class="main__header--title"><?php echo $title_of_site ?? "e_commerce" ?></h3>
+            <h4 class="main__header--title"><?php echo $title_of_site ?? "e_commerce" ?></h4>
             <nav class="main__header--nav">
                 <p class="main__header--nav-connection"><a href="./">connexion</a></p>
                 <p class="main__header--nav-inscription"><a href="./">inscription</a></p>
@@ -35,11 +36,7 @@
                 eveniet!</div>
         </section>
 
-        <footer class="main__footer">
-            <div class="main__footer--rein">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum a aliquid
-                doloribus maxime iure ad eum voluptatibus? Reiciendis minus, error eveniet unde maiores molestias
-                eligendi ducimus temporibus consequatur ipsum reprehenderit.</div>
-        </footer>
+        
     </main>
 </body>
 
