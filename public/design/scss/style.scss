@@ -19,34 +19,74 @@ body {
 
     &__header {
         @include flex(space-around);
+        @include boite(auto, 0px);
+
+        @include media('mobile') {
+            display: grid;
+            grid-template-columns: repeat(1fr, 5);
+            grid-template-rows: repeat(1fr, 2);
+            grid-template-areas: "btnCategory title title basket btnNav"
+                "form form form form form";
+        }
+
         background-color: $secondaryBackgroundColor;
 
         &--btnCategory {
             flex: 1;
+            grid-area: btnCategory;
 
             img {
                 @include boite(15px 10px 10px 10px, 10px);
+
+                &hover {
+                    background-color: $principaleBackgroundColor;
+
+                }
             }
         }
 
         &--title {
             flex: 1;
+            grid-area: title;
             font-size: 2.1vw;
+
+            @include media('mobile') {
+                font-size: 4vw;
+            }
+
             @include boite;
         }
 
         &--form {
             flex: 4;
+            background-color: $principaleBackgroundColor;
+            border-radius: 20px;
+
+            @include media('mobile') {
+                grid-area: form;
+                @include boite(10px 0px, 10px 0px)
+            }
+
             input {
                 outline: none;
                 border: none;
                 height: 30px;
+                border-radius: 10px;
+                background-color: $principaleBackgroundColor;
+            }
+
+            span {
+                @include boite(2px);
+                border-left: 1px solid black;
             }
 
             input:nth-child(1) {
                 width: 75%;
-                background-color: $principaleBackgroundColor;
-                border-radius: 10px;
+
+                @include media('mobile') {
+                    width: 70%;
+                }
+
                 &::placeholder {
                     color: grey;
                     font-style: italic;
@@ -56,13 +96,19 @@ body {
 
             input:nth-child(2) {
                 width: 20%;
+
+                @include media('mobile') {
+                    width: 25%;
+                }
             }
 
         }
 
         &--basket {
             flex: 1;
+            grid-area: basket;
             @include boite;
+
             img {
                 @include flex;
                 @include boite(0px 30%, 0px);
@@ -71,10 +117,46 @@ body {
 
         &--btnNav {
             flex: 1;
+            grid-area: btnNav;
             @include boite;
+
             img {
                 @include flex(flex-end);
                 @include boite(0px 30%, 0px);
+            }
+        }
+    }
+
+
+    &__category {
+        display: inline-block;
+        @include boite(0px, 0px);
+        background-color: $secondaryBackgroundColor;
+        color: $principaleTextColor;
+
+        @include media('pc') {
+            width: 25vw;
+        }
+
+        @include media('tablette') {
+            width: 30vw;
+        }
+
+        @include media('mobile') {
+            width: 90vw;
+        }
+
+        &--parentList {
+            display: block;
+            @include boite(10px, 10px);
+
+            @include flex {
+                flex-direction: column;
+                row-gap: 15px;
+            }
+
+            &-child {
+                list-style: none;
             }
         }
     }

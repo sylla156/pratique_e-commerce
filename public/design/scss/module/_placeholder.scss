@@ -1,7 +1,19 @@
 %icone {
     @include media('mobile'){
-        width: 15px;
+        width: 18px;
     }
     width: 21px;
+    cursor: pointer;
+}
 
+
+%linkNoActive {
+    color: $principaleLinkColor;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+%lineSimple {
+    @include boite;
+    height: 0.00001px;
 }

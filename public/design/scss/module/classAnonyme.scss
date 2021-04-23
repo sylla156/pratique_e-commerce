@@ -1,3 +1,11 @@
 .icone {
     @extend %icone;
 }
+
+.linkNoActive {
+    @extend %linkNoActive;
+}
+
+.lineSimple {
+    @extend %lineSimple;
+}

@@ -4,7 +4,7 @@
 @function minMedia($plateforme) {
     @if ($plateforme == "mobile") {
        
-        @return 300px;
+        @return 0px;
     }
 
     @if ($plateforme == "tablette") {
