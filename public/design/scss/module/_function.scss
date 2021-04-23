@@ -1,0 +1,41 @@
+/// @author sylla ibrahim
+/// @param {string} $plateforme elle specifie l'appareil qui sera utiliser
+/// @return {int} c'est la valeur destiner au media query pour min-width
+@function minMedia($plateforme) {
+    @if ($plateforme == "mobile") {
+       
+        @return 300px;
+    }
+
+    @if ($plateforme == "tablette") {
+      
+        @return 601px;
+    }
+
+    @if ($plateforme == "pc") {
+       @return 1025px;
+    }
+}
+
+// === === === === === === === === === ===
+
+
+
+/// @author sylla ibrahim
+/// @param {string} $plateforme elle specifie l'appareil qui sera utiliser
+/// @return {int} c'est la valeur destiner au media query pour max-width
+@function maxMedia($plateforme) {
+    @if ($plateforme == "mobile") {
+       
+        @return 600px;
+    }
+
+    @if ($plateforme == "tablette") {
+      
+        @return 1024px;
+    }
+
+    @if ($plateforme == "pc") {
+       @return 1800px;
+    }
+}

@@ -19,7 +19,7 @@
                 <p class="main__header--nav-inscription"><a href="./">inscription</a></p>
             </nav>
         </header>
-
+        <hr>
 
         <section class="main__section">
             <div class="main__section--rein">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere id corporis

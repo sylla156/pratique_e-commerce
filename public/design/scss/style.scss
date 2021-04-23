@@ -1,10 +1,13 @@
 @import "./module/_mixin";
+@import "./module/variable";
+@import "./module/function";
 
 //=== === === === === === === === === ===
 
 body {
-    padding: 0px;
-    margin: 10px;
+    @include boite;
+    background: $principaleBackgroundColor;
+    color: $principaleTextColor;
 }
 
 //=== === === === === === === === === ===
@@ -14,7 +17,6 @@ body {
     &__header {
         // #code of header
         @include flex(space-between);
-
 
         &--title {
             // #code of title
