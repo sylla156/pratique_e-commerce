@@ -13,13 +13,21 @@
     <main class="main">
 
         <header class="main__header">
+            <div class="main__header--btnCategory"><img src="https://www.flaticon.com/svg/vstatic/svg/1141/1141964.svg?token=exp=1619179548~hmac=4e94990f14ac1c643d4d421d9b6997ea" class="icone" alt="button de categorie" srcset=""></div>
             <h4 class="main__header--title"><?php echo $title_of_site ?? "e_commerce" ?></h4>
-            <nav class="main__header--nav">
-                <p class="main__header--nav-connection"><a href="./"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY-W_0bbkoBLZ2OddOp9U2OpImyc9GT1q-xCbiP5QqfJ1wPc5Hor9N1jyzNLw5G838fz0&usqp=CAU" alt="->" srcset="" class="icone"> connexion</a></p>
-                <p class="main__header--nav-inscription"><a href="./"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa87NpseB55wDGpS2YHfg5ibVEIZZIYqz_-A&usqp=CAU" alt="->" srcset="" class="icone"> inscription</a></p>
-            </nav>
+
+            <form action="get" class="main__header--form">
+
+               <input type="text" name="search" id="search" placeholder="recherche">
+               <input type="submit" value="recherche">
+            </form>
+
+            <div class="main__header--basket"><img src="https://www.flaticon.com/svg/vstatic/svg/60/60992.svg?token=exp=1619179672~hmac=fe932fa7dd7d059be112fbf8b409c2c2" class="icone" alt="panier" srcset=""></div>
+            <div class="main__header--btnNav"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5tGoMe0TO8Z4nSXJn-iUFuII1c2RyJM-ZeA&usqp=CAU" class="icone" alt="button de navigation" srcset=""></div>
         </header>
-        <hr>
+
+
+
 
         <section class="main__section">
             <div class="main__section--rein">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere id corporis
@@ -36,7 +44,7 @@
                 eveniet!</div>
         </section>
 
-        
+
     </main>
 </body>
 

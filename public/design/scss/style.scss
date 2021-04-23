@@ -6,74 +6,76 @@
 //=== === === === === === === === === ===
 
 body {
-    @include boite;
-    background: $principaleBackgroundColor;
+    @include boite(0px, 0px);
+    background-color: $principaleBackgroundColor;
     color: $principaleTextColor;
 }
 
 //=== === === === === === === === === ===
 
+
 .main {
+    @include boite(0px, 0px);
 
     &__header {
-        // #code of header
-        @include flex(space-between);
+        @include flex(space-around);
         background-color: $secondaryBackgroundColor;
+
+        &--btnCategory {
+            flex: 1;
+
+            img {
+                @include boite(15px 10px 10px 10px, 10px);
+            }
+        }
+
         &--title {
-            // #code of title
-            flex: 3;
-            @include flex(flex-start);
-            @include boite(15px 10px, 0px);
-            
-            @include media('pc') {
-                font-size: 30px;
+            flex: 1;
+            font-size: 2.1vw;
+            @include boite;
+        }
+
+        &--form {
+            flex: 4;
+            input {
+                outline: none;
+                border: none;
+                height: 30px;
             }
 
-            @include media('tablette') {
-                font-size: 25px;
+            input:nth-child(1) {
+                width: 75%;
+                background-color: $principaleBackgroundColor;
+                border-radius: 10px;
+                &::placeholder {
+                    color: grey;
+                    font-style: italic;
+                    text-indent: 20px;
+                }
             }
-            
-            @include media("mobile") {
-                flex: 1;
-                font-size: 20px;
+
+            input:nth-child(2) {
+                width: 20%;
+            }
+
+        }
+
+        &--basket {
+            flex: 1;
+            @include boite;
+            img {
+                @include flex;
+                @include boite(0px 30%, 0px);
             }
         }
 
-
-        &--nav {
-            // #code of nav
-            flex: 1.5;
-            @include flex(space-around, center);
-
-            a {
-                text-decoration: none;
-                font-style: italic;
-                color: $principaleLinkColor;
-
-                @include media('pc') {
-                    font-size: 18px;
-                }
-    
-                @include media('tablette') {
-                    font-size: 16px;
-                }
-                
-                @include media("mobile") {
-                    flex: 1;
-                    font-size: 15px;
-                    padding: 10px;
-                    transition: all 0.4s;
-                }
-                
-                &:hover {
-                    text-decoration: underline;
-                    font-weight: bold;
-                }
-
+        &--btnNav {
+            flex: 1;
+            @include boite;
+            img {
+                @include flex(flex-end);
+                @include boite(0px 30%, 0px);
             }
         }
-
     }
-
-
 }
