@@ -15,8 +15,8 @@
         <header class="main__header">
             <h4 class="main__header--title"><?php echo $title_of_site ?? "e_commerce" ?></h4>
             <nav class="main__header--nav">
-                <p class="main__header--nav-connection"><a href="./">connexion</a></p>
-                <p class="main__header--nav-inscription"><a href="./">inscription</a></p>
+                <p class="main__header--nav-connection"><a href="./"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY-W_0bbkoBLZ2OddOp9U2OpImyc9GT1q-xCbiP5QqfJ1wPc5Hor9N1jyzNLw5G838fz0&usqp=CAU" alt="->" srcset="" class="icone"> connexion</a></p>
+                <p class="main__header--nav-inscription"><a href="./"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa87NpseB55wDGpS2YHfg5ibVEIZZIYqz_-A&usqp=CAU" alt="->" srcset="" class="icone"> inscription</a></p>
             </nav>
         </header>
         <hr>

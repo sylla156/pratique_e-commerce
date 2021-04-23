@@ -1,7 +1,11 @@
+.icone {
+  width: 1vw;
+}
+
 body {
   padding: 0px;
   margin: 0px;
-  background: #ffffff;
+  background: #f7f2f2;
   color: #000000;
 }
 
@@ -9,12 +13,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff;
 }
 .main__header--title {
   flex: 3;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 15px 10px;
+  margin: 0px;
+}
+@media all and (max-width: 1800px) and (min-width: 1025px) {
+  .main__header--title {
+    font-size: 30px;
+  }
+}
+@media all and (max-width: 1024px) and (min-width: 601px) {
+  .main__header--title {
+    font-size: 25px;
+  }
+}
+@media all and (max-width: 600px) and (min-width: 300px) {
+  .main__header--title {
+    flex: 1;
+    font-size: 20px;
+  }
 }
 .main__header--nav {
   flex: 1.5;
@@ -25,6 +48,29 @@ body {
 .main__header--nav a {
   text-decoration: none;
   font-style: italic;
+  color: #000000;
+}
+@media all and (max-width: 1800px) and (min-width: 1025px) {
+  .main__header--nav a {
+    font-size: 18px;
+  }
+}
+@media all and (max-width: 1024px) and (min-width: 601px) {
+  .main__header--nav a {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 600px) and (min-width: 300px) {
+  .main__header--nav a {
+    flex: 1;
+    font-size: 15px;
+    padding: 10px;
+    transition: all 0.4s;
+  }
+}
+.main__header--nav a:hover {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

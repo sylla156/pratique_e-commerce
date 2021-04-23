@@ -1,7 +1,8 @@
 @import "./module/_mixin";
 @import "./module/variable";
 @import "./module/function";
-
+@import "./module/placeholder";
+@import "./module/classAnonyme";
 //=== === === === === === === === === ===
 
 body {
@@ -17,22 +18,57 @@ body {
     &__header {
         // #code of header
         @include flex(space-between);
-
+        background-color: $secondaryBackgroundColor;
         &--title {
             // #code of title
             flex: 3;
             @include flex(flex-start);
+            @include boite(15px 10px, 0px);
+            
+            @include media('pc') {
+                font-size: 30px;
+            }
+
+            @include media('tablette') {
+                font-size: 25px;
+            }
+            
+            @include media("mobile") {
+                flex: 1;
+                font-size: 20px;
+            }
         }
 
 
         &--nav {
             // #code of nav
             flex: 1.5;
-            @include flex(space-around,center);
+            @include flex(space-around, center);
 
             a {
                 text-decoration: none;
                 font-style: italic;
+                color: $principaleLinkColor;
+
+                @include media('pc') {
+                    font-size: 18px;
+                }
+    
+                @include media('tablette') {
+                    font-size: 16px;
+                }
+                
+                @include media("mobile") {
+                    flex: 1;
+                    font-size: 15px;
+                    padding: 10px;
+                    transition: all 0.4s;
+                }
+                
+                &:hover {
+                    text-decoration: underline;
+                    font-weight: bold;
+                }
 
             }
         }
