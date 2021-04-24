@@ -29,18 +29,22 @@ body {
                 "form form form form form";
         }
 
+
+        
+
         background-color: $secondaryBackgroundColor;
 
         &--btnCategory {
             flex: 1;
             grid-area: btnCategory;
+            border-radius: 100%;
 
+            
             img {
                 @include boite(15px 10px 10px 10px, 10px);
-
-                &hover {
+                transition: transform 0.3s;
+                &:hover {
                     background-color: $principaleBackgroundColor;
-
                 }
             }
         }
@@ -129,25 +133,37 @@ body {
 
 
     &__category {
-        display: inline-block;
-        @include boite(0px, 0px);
+        width: 0px;
         background-color: $secondaryBackgroundColor;
         color: $principaleTextColor;
-
-        @include media('pc') {
-            width: 25vw;
-        }
-
-        @include media('tablette') {
-            width: 30vw;
-        }
-
-        @include media('mobile') {
-            width: 90vw;
-        }
+        transition: all 0.6s;
+        position: absolute;
 
         &--parentList {
-            display: block;
+            opacity: 0;
+            @include boite(10px, 10px);
+
+            @include flex {
+                flex-direction: column;
+                row-gap: 15px;
+            }
+
+            &-child {
+                list-style: none;
+            }
+        }
+    }
+
+
+    &__nav {
+        width: 0px;
+        background-color: $secondaryBackgroundColor;
+        color: $principaleTextColor;
+        transition: all 0.6s;
+        position: absolute;
+        right: 0;
+        &--parentList {
+            opacity: 0;
             @include boite(10px, 10px);
 
             @include flex {

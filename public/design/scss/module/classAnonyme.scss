@@ -9,3 +9,11 @@
 .lineSimple {
     @extend %lineSimple;
 }
+
+.noClick {
+    @extend %noClick;
+}
+
+.click {
+    @extend %click;
+}

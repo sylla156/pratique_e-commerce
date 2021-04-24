@@ -9,7 +9,7 @@
 
     @if ($plateforme == "tablette") {
       
-        @return 601px;
+        @return 681px;
     }
 
     @if ($plateforme == "pc") {
@@ -27,7 +27,7 @@
 @function maxMedia($plateforme) {
     @if ($plateforme == "mobile") {
        
-        @return 600px;
+        @return 680px;
     }
 
     @if ($plateforme == "tablette") {
