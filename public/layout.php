@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="design/css/style.css">
+    <script src="js/main.js" type="module" async></script>
     <title><?php echo $title_of_references ?? "erreur1" ?></title>
 </head>
 
@@ -13,7 +14,7 @@
     <main class="main">
 
         <header class="main__header">
-            <div class="main__header--btnCategory"><img src="https://www.flaticon.com/svg/vstatic/svg/1141/1141964.svg?token=exp=1619179548~hmac=4e94990f14ac1c643d4d421d9b6997ea" class="icone" alt="button de categorie" srcset=""></div>
+            <div class="main__header--btnCategory"><img src="https://www.flaticon.com/svg/vstatic/svg/1141/1141964.svg?token=exp=1619179548~hmac=4e94990f14ac1c643d4d421d9b6997ea" class="main__header--btnCategory-img icone" alt="button de categorie" srcset=""></div>
             <h4 class="main__header--title"><a href="./" class="linkNoActive"><?php echo $title_of_site ?? "e_commerce" ?></a></h4>
 
             <form action="get" class="main__header--form">
@@ -24,8 +25,8 @@
             </form>
 
             <div class="main__header--basket"><img src="https://www.flaticon.com/svg/vstatic/svg/60/60992.svg?token=exp=1619179672~hmac=fe932fa7dd7d059be112fbf8b409c2c2" class="icone" alt="panier" srcset=""></div>
-            <div class="main__header--btnNav"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5tGoMe0TO8Z4nSXJn-iUFuII1c2RyJM-ZeA&usqp=CAU" class="icone" alt="button de navigation" srcset=""></div>
-        </header><hr class="lineSimple">
+            <div class="main__header--btnNav"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5tGoMe0TO8Z4nSXJn-iUFuII1c2RyJM-ZeA&usqp=CAU" class="main__header--btnNav-img icone" alt="button de navigation" srcset=""></div>
+        </header>
 
 
         <!-- === === === === === === === === === ===
@@ -33,7 +34,7 @@
                  === === === === === === === === === === -->
         
 
-        <div class="main__category">
+        <div class="main__category noClick">
             <ul class="main__category--parentList">
                 <li class="main__category--parentList-child1 main__category--parentList-child">category1</li>
                 <li class="main__category--parentList-child2 main__category--parentList-child">category2</li>
@@ -51,6 +52,22 @@
         <!-- === === === === === === === === === ===
         === === la finision de category === ===
                  === === === === === === === === === === -->
+
+
+        <!-- === === === === === === === === === ===
+        === === le contenue de nav === ===
+                 === === === === === === === === === === -->
+                 
+        <div class="main__nav noClick">
+            <ul class="main__nav--parentList">
+                <li class="main__nav--parentList-child">connexion</li>
+                <li class="main__nav--parentList-child">inscription</li>
+            </ul>
+        </div>
+                 
+        <!-- === === === === === === === === === ===
+        === === la finision de nav === ===
+                 === === === === === === === === === === --         
 
         <section class="main__section">
             <div class="main__section--rein">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere id corporis
