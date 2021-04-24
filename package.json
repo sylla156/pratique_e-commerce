@@ -4,7 +4,9 @@
   "description": "mise en patique de mes connaissance",
   "main": "index.js",
   "scripts": {
-    "test": "ls"
+    "test": "ls",
+    "sass": "sudo sass public/design/scss/style.scss public/design/css/style.css --watch",
+    "sassdocs": "sudo sassdoc public/design/scss/module"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sylla156/pratique_e-commerce/issues"
   },
-  "homepage": "https://github.com/sylla156/pratique_e-commerce#readme"
+  "homepage": "https://github.com/sylla156/pratique_e-commerce#readme",
+  "dependencies": {
+    "sassdoc": "^2.7.3"
+  }
 }

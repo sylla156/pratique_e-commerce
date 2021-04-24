@@ -1,0 +1,19 @@
+.icone {
+    @extend %icone;
+}
+
+.linkNoActive {
+    @extend %linkNoActive;
+}
+
+.lineSimple {
+    @extend %lineSimple;
+}
+
+.noClick {
+    @extend %noClick;
+}
+
+.click {
+    @extend %click;
+}

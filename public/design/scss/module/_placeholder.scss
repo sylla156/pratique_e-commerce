@@ -1,0 +1,49 @@
+/// la class destiner au icone
+/// leur donne par default une taille
+// et comme cursor pointer
+%icone {
+    @include media('mobile') {
+        width: 18px;
+    }
+
+    width: 21px;
+    cursor: pointer;
+}
+
+/// pour rendre le liens simple
+%linkNoActive {
+    color: $principaleLinkColor;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/// c'est pour les hr pour lui donner un design voulue
+%lineSimple {
+    @include boite;
+    height: 0.00001px;
+}
+
+/// c'est le slide moi j'utlise noClick pour le rendre invisible
+%noClick {
+    display: none;
+    width: 0px;
+    @include boite;
+}
+
+/// c'est le contrait de noClick celui si permet de le rendre visible
+%click {
+    display: block;
+
+    @include media('pc') {
+        width: 20vw !important;
+    }
+
+    @include media('tablette') {
+        width: 40vw !important;
+    }
+
+    @include media('mobile') {
+        width: 90vw !important;
+        height: 76vh;
+    }
+}
