@@ -72,12 +72,15 @@
 
 
         <div class="main__carousel">
+            <div class="main__carousel--btnNextCarousel">
+                <p>next</p>
+            </div>
+            
             <div class="main__carousel--main">
-                <div class="main__carousel--main-btnNextCarousel">
-                    <p>next</p>
-                </div>
-                <div class="main__carousel--main-btnPrevCarousel">
-                    <p>precedent</p>
+                <div class=main__carousel--main-BtnSelectorCarousel">
+                    <ul class="main__carousel--main-BtnSelectorCarousel-parentElement">
+                        
+                    </ul>
                 </div>
                 <ul class="main__carousel--main-parentElement">
                     <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc0.jpg" alt="image" srcset=""></a></li>
@@ -90,6 +93,10 @@
                     <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc7.jpg" alt="image" srcset=""></a></li>
                     <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc8.jpg" alt="image" srcset=""></a></li>
                 </ul>
+            </div>
+
+            <div class="main__carousel--btnPrevCarousel">
+                <p>prev</p>
             </div>
         </div>
         <!-- 

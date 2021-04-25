@@ -18,11 +18,12 @@ class carousel {
      * @param {DOM} _carouselNextBtn - le btn qui sert pour faire avancer le carousel 
      * @param {DOM} _carouselPrevBtn - le btn qui sert a faie reculer le carousel
      */
-    constructor(_carouselMain, _carouselAllChild, _carouselNextBtn, _carouselPrevBtn) {
+    constructor(_carouselMain, _carouselAllChild, _carouselNextBtn, _carouselPrevBtn, _carouselSelectorElement) {
         this.carouselMAin = _carouselMain;
         this.carouselAllChild = _carouselAllChild;
         this.carouselNextBtn = _carouselNextBtn;
         this.carouselPrevBtn = _carouselPrevBtn;
+        this.carouselSelectorElement = _carouselSelectorElement;
 
         this.numberElement = this.carouselAllChild.length; // number element in carousel
         this.compteurOfCarousel = 0; // le compteur par default du carousel
@@ -87,13 +88,48 @@ class carousel {
         })
     }
 
+    addSelectorElement() {
+        let compt = this.numberElement;
+        let element = undefined;
+        for (let i = 0; i < compt; i++) {
+            element = document.createElement('li');
+            element.classList.add(`selector${i}`);
+            this.carouselSelectorElement.append(element);
+        }
+    }
 
+    effetInSelectorElement() {
+        this.addSelectorElement();
+        let children = this.carouselSelectorElement.children;
+        for (let i = 0; i < children.length; i++) {
+            const element = children[i];
+            element.addEventListener('click', (e) => {
+                let childrenElement = (parseInt(element.className.split('selector')[1]));
+                this.compteurOfCarousel = (this.widthElement() * childrenElement);
+                this.move(this.compteurOfCarousel);
+            })
+
+        }
+    }
     /**
      * 
      * @param {number} _widthcompteurOfCarousel - la largeur qui'il a besion pour faire bouger le carousel 
      */
     move(_widthcompteurOfCarousel) {
-        this.carouselMAin.style.transform = `translate(-${_widthcompteurOfCarousel}px)`
+        let childrenElementIndex = (_widthcompteurOfCarousel / this.widthElement());
+        let children = this.carouselSelectorElement.children;
+        for (let index = 0; index < children.length; index++) {
+            const element = children[index];
+            let childrenElement = (parseInt(element.className.split('selector')[1]));
+            if (childrenElement === childrenElementIndex) {
+                element.style.backgroundColor = 'red';
+            } else if (childrenElement !== childrenElementIndex) {
+                element.style.backgroundColor = 'blue';
+            }
+        }
+        this.carouselMAin.style.transform = `translate(-${_widthcompteurOfCarousel}px)`;
+
+        // console.log(childrenElement);
     }
 
     /**
@@ -102,6 +138,7 @@ class carousel {
     execute() {
         this.btnNext();
         this.btnPrev();
+        this.effetInSelectorElement();
         setInterval(() => {
             this.nextAuto();
         }, this.getTimeForCarousel);

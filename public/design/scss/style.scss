@@ -9,7 +9,6 @@ body {
     @include boite(0px, 0px);
     background-color: $principaleBackgroundColor;
     color: $principaleTextColor;
-    overflow-x: hidden;
 }
 
 //=== === === === === === === === === ===
@@ -185,6 +184,7 @@ body {
         @include boite;
         @include flex {
             flex-direction: row;
+            gap: 6px;
         }
 
         @include media('pc') {
@@ -217,10 +217,14 @@ body {
                 @include dimension(95vw, 45vh);
             }
             
-            // // background-color: #fff;
-            // &-btnNextCarousel {
-            //     color: red;
-            // }
+           div {
+
+              ul li{
+                  @include boite(8px,5px);
+                  border-radius:100%;
+                  background-color: #7474dfde;
+              }
+           }
             
             ul {
                 @include boite;

@@ -52,7 +52,6 @@ body {
   margin: 0px;
   background-color: #f7f2f2;
   color: #000000;
-  overflow-x: hidden;
 }
 
 .main {
@@ -219,6 +218,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  gap: 6px;
 }
 @media all and (max-width: 1800px) and (min-width: 1025px) {
   .main__carousel {
@@ -260,6 +260,12 @@ body {
     width: 95vw;
     height: 45vh;
   }
+}
+.main__carousel--main div ul li {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 100%;
+  background-color: #7474dfde;
 }
 .main__carousel--main ul {
   padding: 0px;
