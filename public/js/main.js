@@ -27,3 +27,11 @@ let sliderForNav = new slide(btnNav, nav, contenueNav);
 sliderForNav.setStyleClick('click');
 sliderForNav.setStyleNoClick('noClick');
 sliderForNav.execute();
+
+
+//=== === === === === === === === === === === === === === === ===
+//=== === === === === === === === === === === === === === === ===
+//=== === === fin des slide de categorie et connexion === === ===
+//=== === === === === === === === === === === === === === === ===
+//=== === === === === === === === === === === === === === === ===
+

@@ -67,8 +67,26 @@
                  
         <!-- === === === === === === === === === ===
         === === la finision de nav === ===
-                 === === === === === === === === === === --         
+                 === === === === === === === === === === -->        
+                 
+                 
 
+        <div class="main__carousel">
+            <div class="main__carousel--main">
+                <ul class="main__carousel--main-parentElement">
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc0.jpg" alt="image" srcset=""></a></li>
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc1.jpg" alt="image" srcset=""></a></li>
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc2.jpg" alt="image" srcset=""></a></li>
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc3.jpg" alt="image" srcset=""></a></li>
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc4.jpg" alt="image" srcset=""></a></li>
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc5.jpg" alt="image" srcset=""></a></li>
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc6.jpg" alt="image" srcset=""></a></li>
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc7.jpg" alt="image" srcset=""></a></li>
+                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc8.jpg" alt="image" srcset=""></a></li>
+                </ul>
+            </div>
+        </div>         
+<!-- 
         <section class="main__section">
             <div class="main__section--rein">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere id corporis
                 quas quo molestiae. Ratione veniam dolor, quod nobis illo necessitatibus saepe doloribus deserunt
@@ -82,7 +100,7 @@
                 Laboriosam assumenda sed dicta ullam animi labore, accusamus, dolorem necessitatibus modi esse soluta
                 officia et odio fuga, magnam blanditiis ea enim corporis ut? Fuga ipsa veniam explicabo! Autem, itaque
                 eveniet!</div>
-        </section>
+        </section> -->
 
 
     </main>
