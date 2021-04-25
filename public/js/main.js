@@ -44,6 +44,9 @@ sliderForNav.execute();
 
 let carouselMAin = document.querySelector('.main__carousel--main-parentElement');
 let carouselAllChild = document.querySelectorAll('.main__carousel--main-parentElement_element');
-
-let carou = new carousel(carouselMAin,carouselAllChild);
+let carouselBtnNext = document.querySelector('.main__carousel--main-btnNextCarousel');
+let carouselBtnPrev = document.querySelector('.main__carousel--main-btnPrevCarousel')
+let carou = new carousel(carouselMAin,carouselAllChild,carouselBtnNext,carouselBtnPrev);
+// carou.btnNext();
+// carou.btnPrev();
 carou.execute();

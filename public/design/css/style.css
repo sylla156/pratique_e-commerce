@@ -218,6 +218,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 @media all and (max-width: 1800px) and (min-width: 1025px) {
   .main__carousel {

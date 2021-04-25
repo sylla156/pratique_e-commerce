@@ -32,7 +32,7 @@
         <!-- === === === === === === === === === ===
         === === le contenue de category === ===
                  === === === === === === === === === === -->
-        
+
 
         <div class="main__category noClick">
             <ul class="main__category--parentList">
@@ -57,22 +57,28 @@
         <!-- === === === === === === === === === ===
         === === le contenue de nav === ===
                  === === === === === === === === === === -->
-                 
+
         <div class="main__nav noClick">
             <ul class="main__nav--parentList">
                 <li class="main__nav--parentList-child">connexion</li>
                 <li class="main__nav--parentList-child">inscription</li>
             </ul>
         </div>
-                 
+
         <!-- === === === === === === === === === ===
         === === la finision de nav === ===
-                 === === === === === === === === === === -->        
-                 
-                 
+                 === === === === === === === === === === -->
+
+
 
         <div class="main__carousel">
             <div class="main__carousel--main">
+                <div class="main__carousel--main-btnNextCarousel">
+                    <p>next</p>
+                </div>
+                <div class="main__carousel--main-btnPrevCarousel">
+                    <p>precedent</p>
+                </div>
                 <ul class="main__carousel--main-parentElement">
                     <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc0.jpg" alt="image" srcset=""></a></li>
                     <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc1.jpg" alt="image" srcset=""></a></li>
@@ -85,8 +91,8 @@
                     <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc8.jpg" alt="image" srcset=""></a></li>
                 </ul>
             </div>
-        </div>         
-<!-- 
+        </div>
+        <!-- 
         <section class="main__section">
             <div class="main__section--rein">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere id corporis
                 quas quo molestiae. Ratione veniam dolor, quod nobis illo necessitatibus saepe doloribus deserunt

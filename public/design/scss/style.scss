@@ -183,7 +183,9 @@ body {
 
     &__carousel {
         @include boite;
-        @include flex;
+        @include flex {
+            flex-direction: row;
+        }
 
         @include media('pc') {
             @include dimension(100vw, 80vh);
@@ -215,7 +217,10 @@ body {
                 @include dimension(95vw, 45vh);
             }
             
-            // background-color: #fff;
+            // // background-color: #fff;
+            // &-btnNextCarousel {
+            //     color: red;
+            // }
             
             ul {
                 @include boite;
