@@ -1,4 +1,5 @@
 import { slide } from "./module/slide.js";
+import { carousel } from "./module/carousel.js";
 //=== === === === === === === === === === === === === === === ===
 //=== selction des element catagorie puis use la class slide ===
 //=== === === === === === === === === === === === === === === ===
@@ -35,3 +36,14 @@ sliderForNav.execute();
 //=== === === === === === === === === === === === === === === ===
 //=== === === === === === === === === === === === === === === ===
 
+
+
+//=== === === === === === === === === === === === === === === ===
+//=== selection des element carousel puis use la class carousel===
+//=== === === === === === === === === === === === === === === ===
+
+let carouselMAin = document.querySelector('.main__carousel--main-parentElement');
+let carouselAllChild = document.querySelectorAll('.main__carousel--main-parentElement_element');
+
+let carou = new carousel(carouselMAin,carouselAllChild);
+carou.execute();
