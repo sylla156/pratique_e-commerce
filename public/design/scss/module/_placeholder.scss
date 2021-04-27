@@ -17,10 +17,52 @@
     cursor: pointer;
 }
 
+
+%btnActive {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    background-color: $btnColor;
+    border: inherit;
+    @include boite(20px 25px, 5px);
+    font-size: medium;
+    font-style: italic;
+    transition: all 0.4;
+    &:hover {
+        transform: scale(1.3);
+        border-radius: (20px)
+    }
+}
+
+%btnDislabel {
+    @include boite(20px 25px, 5px);
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 2px solid $btnColor;
+    border: 20%;
+    color: $btnColor;
+    font-size: medium;
+    font-style: italic;
+    transition: all  0.4;
+    &:hover {
+        transform: scale(1.3);
+        border-radius: (20px)
+    }
+}
+
 /// c'est pour les hr pour lui donner un design voulue
 %lineSimple {
     @include boite;
-    height: 0.00001px;
+    height: 1px;
+    width: 80%;
+    border-top: 1px solid black;
+}
+
+%lineBr {
+    @include boite(0px 30px,50px);
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid black;
 }
 
 /// c'est le slide moi j'utlise noClick pour le rendre invisible

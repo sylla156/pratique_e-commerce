@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="design/css/style.css">
     <script src="js/main.js" type="module" async></script>
-    <title><?php echo $title_of_references ?? "erreur1" ?></title>
+    <title><?= $title_of_references ?? "erreur1" ?></title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 
         <header class="main__header">
             <div class="main__header--btnCategory"><img src="https://www.flaticon.com/svg/vstatic/svg/1141/1141964.svg?token=exp=1619179548~hmac=4e94990f14ac1c643d4d421d9b6997ea" class="main__header--btnCategory-img icone" alt="button de categorie" srcset=""></div>
-            <h4 class="main__header--title"><a href="./" class="linkNoActive"><?php echo $title_of_site ?? "e_commerce" ?></a></h4>
+            <h4 class="main__header--title"><a href="./" class="linkNoActive"><?= $title_of_site ?? "e_commerce" ?></a></h4>
 
             <form action="get" class="main__header--form">
 
@@ -60,8 +60,9 @@
 
         <div class="main__nav noClick">
             <ul class="main__nav--parentList">
-                <li class="main__nav--parentList-child">connexion</li>
-                <li class="main__nav--parentList-child">inscription</li>
+                <li class="main__nav--parentList-child "><a href="/connexion" class="btnActive">connexion</a></li>
+                <p class="lineBr"></p>
+                <li class="main__nav--parentList-child "><a href="/inscription" class="btnDislabel">inscription</a></li>
             </ul>
         </div>
 
