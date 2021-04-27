@@ -134,6 +134,7 @@ body {
 
 
     &__category {
+        z-index:2;
         width: 0px;
         background-color: $secondaryBackgroundColor;
         color: $principaleTextColor;
@@ -157,6 +158,7 @@ body {
 
 
     &__nav {
+        z-index:2;
         width: 0px;
         background-color: $secondaryBackgroundColor;
         color: $principaleTextColor;
@@ -181,7 +183,10 @@ body {
 
 
     &__carousel {
+        position: absolute;
         @include boite;
+        z-index: -1;
+
         @include flex {
             flex-direction: row;
             gap: 6px;
@@ -203,39 +208,46 @@ body {
         // background-color: #000;
         &--main {
             @include boite;
-            overflow:hidden;
+            overflow: hidden;
+
             @include media('pc') {
                 @include dimension(75vw, 70vh);
             }
-            
+
             @include media('tablette') {
                 @include dimension(85vw, 40vh);
-                
+
             }
-            
+
             @include media('mobile') {
                 @include dimension(95vw, 45vh);
             }
-            
-           div {
+            // pour les selector du carousel les points rond
+            div {
 
-              ul li{
-                  @include boite(8px,5px);
-                  border-radius:100%;
-                  background-color: #7474dfde;
-              }
-           }
-            
+                ul {
+                    @include flex;
+
+                    li {
+                        @include boite(8px, 5px);
+                        border-radius: 100%;
+                        background-color: #fff;
+                    }
+                }
+            }
+
+            //pour les element du carousel
             ul {
                 @include boite;
                 @include flex(flex-start);
-                
+
                 li {
                     list-style: none;
                     @include flex;
                 }
-                
+
                 transition: all 1s;
+
                 a img {
                     @include media('pc') {
                         @include dimension(75vw, 70vh);

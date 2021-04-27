@@ -72,14 +72,14 @@
 
 
         <div class="main__carousel">
-            <div class="main__carousel--btnNextCarousel">
-                <p>next</p>
+            <div class="main__carousel--btnPrevCarousel">
+                <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="next" class="icone" style="transform: rotate(180deg);" srcset="">
             </div>
-            
+
             <div class="main__carousel--main">
-                <div class=main__carousel--main-BtnSelectorCarousel">
-                    <ul class="main__carousel--main-BtnSelectorCarousel-parentElement">
-                        
+                <div class=main__carousel--main__btnSelectorCarousel">
+                    <ul class="main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel">
+
                     </ul>
                 </div>
                 <ul class="main__carousel--main-parentElement">
@@ -95,8 +95,8 @@
                 </ul>
             </div>
 
-            <div class="main__carousel--btnPrevCarousel">
-                <p>prev</p>
+            <div class="main__carousel--btnNextCarousel">
+                <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="prev" class="icone" srcset="">
             </div>
         </div>
         <!-- 

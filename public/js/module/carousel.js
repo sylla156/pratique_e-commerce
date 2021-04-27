@@ -88,6 +88,9 @@ class carousel {
         })
     }
 
+   /**
+    *  @description il ajoute les seletor element en fonction du nombre image
+    */
     addSelectorElement() {
         let compt = this.numberElement;
         let element = undefined;
@@ -98,6 +101,9 @@ class carousel {
         }
     }
 
+    /**
+     * @description on ajoute des event sur tous les selector element
+     */
     effetInSelectorElement() {
         this.addSelectorElement();
         let children = this.carouselSelectorElement.children;
@@ -111,24 +117,32 @@ class carousel {
 
         }
     }
+
     /**
      * 
-     * @param {number} _widthcompteurOfCarousel - la largeur qui'il a besion pour faire bouger le carousel 
+     * @param {widthOfTranslateCarousel} _widthcompteurOfCarousel - pour pourvoir bouger seule 
      */
-    move(_widthcompteurOfCarousel) {
+    autoMovingSelectorElement(_widthcompteurOfCarousel) {
         let childrenElementIndex = (_widthcompteurOfCarousel / this.widthElement());
         let children = this.carouselSelectorElement.children;
         for (let index = 0; index < children.length; index++) {
             const element = children[index];
             let childrenElement = (parseInt(element.className.split('selector')[1]));
             if (childrenElement === childrenElementIndex) {
-                element.style.backgroundColor = 'red';
+                element.style.backgroundColor = '#63b0f4';
             } else if (childrenElement !== childrenElementIndex) {
-                element.style.backgroundColor = 'blue';
-            }
+                element.style.backgroundColor = '#fff';                                                                                                                                                                                                                                                                                                                                                                                                                               }
         }
-        this.carouselMAin.style.transform = `translate(-${_widthcompteurOfCarousel}px)`;
+    }
 
+
+    /**
+     * 
+     * @param {number} _widthcompteurOfCarousel - la largeur qui'il a besion pour faire bouger le carousel 
+     */
+    move(_widthcompteurOfCarousel) {
+        this.autoMovingSelectorElement(_widthcompteurOfCarousel);
+        this.carouselMAin.style.transform = `translate(-${_widthcompteurOfCarousel}px)`;
         // console.log(childrenElement);
     }
 

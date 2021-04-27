@@ -171,6 +171,7 @@ body {
   margin: 0px;
 }
 .main__category {
+  z-index: 2;
   width: 0px;
   background-color: #ffffff;
   color: #000000;
@@ -191,6 +192,7 @@ body {
   list-style: none;
 }
 .main__nav {
+  z-index: 2;
   width: 0px;
   background-color: #ffffff;
   color: #000000;
@@ -212,8 +214,10 @@ body {
   list-style: none;
 }
 .main__carousel {
+  position: absolute;
   padding: 0px;
   margin: 0px;
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,11 +265,16 @@ body {
     height: 45vh;
   }
 }
+.main__carousel--main div ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .main__carousel--main div ul li {
   padding: 8px;
   margin: 5px;
   border-radius: 100%;
-  background-color: #7474dfde;
+  background-color: #fff;
 }
 .main__carousel--main ul {
   padding: 0px;
