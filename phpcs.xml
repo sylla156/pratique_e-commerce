@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<rulset name="src">
+   <description>the all description</description>
+
+   <file>src</file>
+   <file>public/index.php</file>
+   <file>public/layout.php</file>
+   <exclude-pattern>*/tests/*</exclude-pattern>
+   <rule ref="PSR12">
+ </rule>
+</rulset>
