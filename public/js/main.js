@@ -1,4 +1,5 @@
 import { slide } from "./module/slide.js";
+import { carousel } from "./module/carousel.js";
 //=== === === === === === === === === === === === === === === ===
 //=== selction des element catagorie puis use la class slide ===
 //=== === === === === === === === === === === === === === === ===
@@ -27,3 +28,24 @@ let sliderForNav = new slide(btnNav, nav, contenueNav);
 sliderForNav.setStyleClick('click');
 sliderForNav.setStyleNoClick('noClick');
 sliderForNav.execute();
+
+
+//=== === === === === === === === === === === === === === === ===
+//=== === === === === === === === === === === === === === === ===
+//=== === === fin des slide de categorie et connexion === === ===
+//=== === === === === === === === === === === === === === === ===
+//=== === === === === === === === === === === === === === === ===
+
+
+
+//=== === === === === === === === === === === === === === === ===
+//=== selection des element carousel puis use la class carousel===
+//=== === === === === === === === === === === === === === === ===
+
+let carouselMAin = document.querySelector('.main__carousel--main-parentElement');
+let carouselAllChild = document.querySelectorAll('.main__carousel--main-parentElement_element');
+let carouselBtnNext = document.querySelector('.main__carousel--btnNextCarousel');
+let carouselBtnPrev = document.querySelector('.main__carousel--btnPrevCarousel');
+let carouselSelectorELement = document.querySelector('.main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel');
+let carou = new carousel(carouselMAin,carouselAllChild,carouselBtnNext,carouselBtnPrev,carouselSelectorELement);
+carou.execute();

@@ -32,3 +32,11 @@
         @content;
     }
 }
+
+/// @author sylla ibrahim
+/// @param  {int} $width la largeur 
+/// @param {int} $heigth la hauteur 
+@mixin dimension($width: auto,$heigth: auto) {
+    width: $width;
+    height: $heigth;
+}

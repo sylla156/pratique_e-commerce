@@ -171,6 +171,7 @@ body {
   margin: 0px;
 }
 .main__category {
+  z-index: 2;
   width: 0px;
   background-color: #ffffff;
   color: #000000;
@@ -191,6 +192,7 @@ body {
   list-style: none;
 }
 .main__nav {
+  z-index: 2;
   width: 0px;
   background-color: #ffffff;
   color: #000000;
@@ -210,6 +212,101 @@ body {
 }
 .main__nav--parentList-child {
   list-style: none;
+}
+.main__carousel {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 6px;
+}
+@media all and (max-width: 1800px) and (min-width: 1025px) {
+  .main__carousel {
+    width: 100vw;
+    height: 80vh;
+  }
+}
+@media all and (max-width: 1024px) and (min-width: 681px) {
+  .main__carousel {
+    width: 100vw;
+    height: 50vh;
+  }
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .main__carousel {
+    width: 100vw;
+    height: 50vh;
+  }
+}
+.main__carousel--main {
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+@media all and (max-width: 1800px) and (min-width: 1025px) {
+  .main__carousel--main {
+    width: 75vw;
+    height: 70vh;
+  }
+}
+@media all and (max-width: 1024px) and (min-width: 681px) {
+  .main__carousel--main {
+    width: 85vw;
+    height: 40vh;
+  }
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .main__carousel--main {
+    width: 95vw;
+    height: 45vh;
+  }
+}
+.main__carousel--main div ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__carousel--main div ul li {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.main__carousel--main ul {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 1s;
+}
+.main__carousel--main ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 1800px) and (min-width: 1025px) {
+  .main__carousel--main ul a img {
+    width: 75vw;
+    height: 70vh;
+  }
+}
+@media all and (max-width: 1024px) and (min-width: 681px) {
+  .main__carousel--main ul a img {
+    width: 85vw;
+    height: 40vh;
+  }
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .main__carousel--main ul a img {
+    width: 95vw;
+    height: 45vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
