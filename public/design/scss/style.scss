@@ -9,6 +9,7 @@ body {
     @include boite(0px, 0px);
     background-color: $principaleBackgroundColor;
     color: $principaleTextColor;
+    // overflow-x: hidden;
 }
 
 //=== === === === === === === === === ===
@@ -165,18 +166,22 @@ body {
         transition: all 0.6s;
         position: absolute;
         right: 0;
-
-        &--parentList {
-            opacity: 0;
-            @include boite(10px, 10px);
-
-            @include flex {
-                flex-direction: column;
-                row-gap: 15px;
-            }
-
-            &-child {
-                list-style: none;
+        height: 40vh !important;
+        &--center {
+            @include flex;
+            @include boite(10px,10px);
+            &--parentList {
+                opacity: 0;
+                @include boite(10px, 10px);
+                
+                @include flex {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+                
+                &-child {
+                    list-style: none;
+                }
             }
         }
     }
@@ -263,6 +268,37 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+
+.form{
+    @include boite;
+    height: 80vh;
+    width: 100vw; 
+    @include flex;
+
+    form {
+        @include media('mobile') {
+            @include boite(50px);
+        }
+        @include boite(100px);
+        background-color: $secondaryBackgroundColor;
+        @include flex {
+            flex-direction: column;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+            @include media('mobile') {
+                width: 50vw;
+                height: 20px;
+            }
+            height: 20px;
+            width: 60vw;
+            background-color: $principaleBackgroundColor;
         }
     }
 }

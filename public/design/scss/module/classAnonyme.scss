@@ -9,11 +9,21 @@
 .lineSimple {
     @extend %lineSimple;
 }
-
+.lineBr {
+    @extend %lineBr;
+}
 .noClick {
     @extend %noClick;
 }
 
 .click {
     @extend %click;
+}
+
+.btnActive {
+    @extend %btnActive;
+}
+
+.btnDislabel {
+    @extend %btnDislabel
 }
