@@ -9,6 +9,7 @@ body {
     @include boite(0px, 0px);
     background-color: $principaleBackgroundColor;
     color: $principaleTextColor;
+    // overflow-x: hidden;
 }
 
 //=== === === === === === === === === ===

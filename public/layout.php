@@ -15,7 +15,7 @@
 
         <header class="main__header">
             <div class="main__header--btnCategory"><img src="https://www.flaticon.com/svg/vstatic/svg/1141/1141964.svg?token=exp=1619179548~hmac=4e94990f14ac1c643d4d421d9b6997ea" class="main__header--btnCategory-img icone" alt="button de categorie" srcset=""></div>
-            <h4 class="main__header--title"><a href="./" class="linkNoActive"><?= $title_of_site ?? "e_commerce" ?></a></h4>
+            <h4 class="main__header--title"><a href="./" class="linkNoActive"> <?= $title_of_site ?? "e_commerce" ?>       </a></h4>
 
             <form action="get" class="main__header--form">
 
@@ -73,7 +73,7 @@
 
         <?php
         if ($_SERVER['REQUEST_URI'] === '/') {
-        ?>
+            ?>
 
             <div class="main__carousel">
                 <div class="main__carousel--btnPrevCarousel">
@@ -103,9 +103,7 @@
                     <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="prev" class="icone" srcset="">
                 </div>
             </div>
-        <?php
-        }
-        ?>
+        <?php } ?>
 
         <!-- 
         <section class="main__section">
