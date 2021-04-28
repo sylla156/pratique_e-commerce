@@ -71,35 +71,42 @@
                  === === === === === === === === === === -->
 
 
+        <?php
+        if ($_SERVER['REQUEST_URI'] === '/') {
+        ?>
 
-        <div class="main__carousel">
-            <div class="main__carousel--btnPrevCarousel">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="next" class="icone" style="transform: rotate(180deg);" srcset="">
-            </div>
+            <div class="main__carousel">
+                <div class="main__carousel--btnPrevCarousel">
+                    <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="next" class="icone" style="transform: rotate(180deg);" srcset="">
+                </div>
 
-            <div class="main__carousel--main">
-                <div class=main__carousel--main__btnSelectorCarousel">
-                    <ul class="main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel">
+                <div class="main__carousel--main">
+                    <div class=main__carousel--main__btnSelectorCarousel">
+                        <ul class="main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel">
 
+                        </ul>
+                    </div>
+                    <ul class="main__carousel--main-parentElement">
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc0.jpg" alt="image" srcset=""></a></li>
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc1.jpg" alt="image" srcset=""></a></li>
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc2.jpg" alt="image" srcset=""></a></li>
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc3.jpg" alt="image" srcset=""></a></li>
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc4.jpg" alt="image" srcset=""></a></li>
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc5.jpg" alt="image" srcset=""></a></li>
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc6.jpg" alt="image" srcset=""></a></li>
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc7.jpg" alt="image" srcset=""></a></li>
+                        <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc8.jpg" alt="image" srcset=""></a></li>
                     </ul>
                 </div>
-                <ul class="main__carousel--main-parentElement">
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc0.jpg" alt="image" srcset=""></a></li>
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc1.jpg" alt="image" srcset=""></a></li>
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc2.jpg" alt="image" srcset=""></a></li>
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc3.jpg" alt="image" srcset=""></a></li>
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc4.jpg" alt="image" srcset=""></a></li>
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc5.jpg" alt="image" srcset=""></a></li>
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc6.jpg" alt="image" srcset=""></a></li>
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc7.jpg" alt="image" srcset=""></a></li>
-                    <li class="main__carousel--main-parentElement_element"><a href="./"><img src="./picture/carousel/pc8.jpg" alt="image" srcset=""></a></li>
-                </ul>
-            </div>
 
-            <div class="main__carousel--btnNextCarousel">
-                <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="prev" class="icone" srcset="">
+                <div class="main__carousel--btnNextCarousel">
+                    <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="prev" class="icone" srcset="">
+                </div>
             </div>
-        </div>
+        <?php
+        }
+        ?>
+
         <!-- 
         <section class="main__section">
             <div class="main__section--rein">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere id corporis
