@@ -48,4 +48,4 @@ let carouselBtnNext = document.querySelector('.main__carousel--btnNextCarousel')
 let carouselBtnPrev = document.querySelector('.main__carousel--btnPrevCarousel');
 let carouselSelectorELement = document.querySelector('.main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel');
 let carou = new carousel(carouselMAin,carouselAllChild,carouselBtnNext,carouselBtnPrev,carouselSelectorELement);
-// carou.execute();
+carou.execute();

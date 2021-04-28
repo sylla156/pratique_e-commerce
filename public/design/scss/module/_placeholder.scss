@@ -27,10 +27,10 @@
     @include boite(20px 25px, 5px);
     font-size: medium;
     font-style: italic;
-    transition: all 0.4;
+    transition: all 0.6;
     &:hover {
-        transform: scale(1.3);
-        border-radius: (20px)
+        transform: scale(0.98);
+        border-radius: (5px)
     }
 }
 
@@ -43,10 +43,10 @@
     color: $btnColor;
     font-size: medium;
     font-style: italic;
-    transition: all  0.4;
+    transition: all  0.6;
     &:hover {
-        transform: scale(1.3);
-        border-radius: (20px)
+        transform: scale(0.98);
+        border-radius: (5px)
     }
 }
 

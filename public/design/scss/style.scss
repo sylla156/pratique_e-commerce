@@ -271,3 +271,34 @@ body {
         }
     }
 }
+
+.form{
+    @include boite;
+    height: 80vh;
+    width: 100vw; 
+    @include flex;
+
+    form {
+        @include media('mobile') {
+            @include boite(50px);
+        }
+        @include boite(100px);
+        background-color: $secondaryBackgroundColor;
+        @include flex {
+            flex-direction: column;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+            @include media('mobile') {
+                width: 50vw;
+                height: 20px;
+            }
+            height: 20px;
+            width: 60vw;
+            background-color: $principaleBackgroundColor;
+        }
+    }
+}
