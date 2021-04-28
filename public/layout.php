@@ -14,7 +14,7 @@
     <main class="main">
 
         <header class="main__header">
-            <div class="main__header--btnCategory"><img src="https://www.flaticon.com/svg/vstatic/svg/1141/1141964.svg?token=exp=1619179548~hmac=4e94990f14ac1c643d4d421d9b6997ea" class="main__header--btnCategory-img icone" alt="button de categorie" srcset=""></div>
+            <div class="main__header--btnCategory"><img src="./picture/icone/list.png" class="main__header--btnCategory-img icone" alt="button de categorie" srcset=""></div>
             <h4 class="main__header--title"><a href="./" class="linkNoActive"> <?= $title_of_site ?? "e_commerce" ?>       </a></h4>
 
             <form action="get" class="main__header--form">
@@ -24,8 +24,8 @@
                 <input type="submit" value="recherche">
             </form>
 
-            <div class="main__header--basket"><img src="https://www.flaticon.com/svg/vstatic/svg/60/60992.svg?token=exp=1619179672~hmac=fe932fa7dd7d059be112fbf8b409c2c2" class="icone" alt="panier" srcset=""></div>
-            <div class="main__header--btnNav"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5tGoMe0TO8Z4nSXJn-iUFuII1c2RyJM-ZeA&usqp=CAU" class="main__header--btnNav-img icone" alt="button de navigation" srcset=""></div>
+            <div class="main__header--basket"><img src="./picture/icone/basket.png" class="icone" alt="panier" srcset=""></div>
+            <div class="main__header--btnNav"><img src="./picture/icone/user.png" class="main__header--btnNav-img icone" alt="button de navigation" srcset=""></div>
         </header>
 
 
@@ -77,7 +77,7 @@
 
             <div class="main__carousel">
                 <div class="main__carousel--btnPrevCarousel">
-                    <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="next" class="icone" style="transform: rotate(180deg);" srcset="">
+                    <img src="./picture/icone/direction.png" alt="next" class="icone" style="transform: rotate(180deg);" srcset="">
                 </div>
 
                 <div class="main__carousel--main">
@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="main__carousel--btnNextCarousel">
-                    <img src="https://www.flaticon.com/svg/vstatic/svg/271/271228.svg?token=exp=1619374975~hmac=93be500eb0bbc0c00ce2e91ba72b1d34" alt="prev" class="icone" srcset="">
+                    <img src="./picture/icone/direction.png" alt="prev" class="icone" srcset="">
                 </div>
             </div>
         <?php } ?>
