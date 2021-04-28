@@ -167,22 +167,21 @@ body {
         position: absolute;
         right: 0;
         height: 40vh !important;
-        @include flex(space-around,center) {
-            flex-direction: column;
-            gap: 10%;
-        }
-
-        &--parentList {
-            opacity: 0;
-            @include boite(10px, 10px);
-
-            @include flex {
-                flex-direction: column;
-                row-gap: 15px;
-            }
-
-            &-child {
-                list-style: none;
+        &--center {
+            @include flex;
+            @include boite(10px,10px);
+            &--parentList {
+                opacity: 0;
+                @include boite(10px, 10px);
+                
+                @include flex {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+                
+                &-child {
+                    list-style: none;
+                }
             }
         }
     }

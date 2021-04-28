@@ -22,7 +22,7 @@ sliderForCategory.execute();
 
 let btnNav = document.querySelector('.main__header--btnNav-img');
 let nav = document.querySelector('.main__nav');
-let contenueNav = document.querySelector('.main__nav--parentList');
+let contenueNav = document.querySelector('.main__nav--center--parentList');
 
 let sliderForNav = new slide(btnNav, nav, contenueNav);
 sliderForNav.setStyleClick('click');

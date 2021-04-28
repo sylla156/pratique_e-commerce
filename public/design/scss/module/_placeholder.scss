@@ -59,9 +59,9 @@
 }
 
 %lineBr {
-    @include boite(0px 30px,50px);
+    @include boite(0px 30px);
     height: 1px;
-    width: 100%;
+    width: 40%;
     border-top: 1px solid black;
 }
 

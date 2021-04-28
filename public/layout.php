@@ -59,11 +59,13 @@
                  === === === === === === === === === === -->
 
         <div class="main__nav noClick">
-            <ul class="main__nav--parentList">
-                <li class="main__nav--parentList-child "><a href="/connexion" class="btnActive">connexion</a></li>
-                <p class="lineBr"></p>
-                <li class="main__nav--parentList-child "><a href="/inscription" class="btnDislabel">inscription</a></li>
-            </ul>
+            <div class="main__nav--center">
+                <ul class="main__nav--center--parentList">
+                    <li class="main__nav--center--parentList-child "><a href="/connexion" class="btnActive">connexion</a></li>
+                    <p class="lineBr"></p>
+                    <li class="main__nav--center--parentList-child "><a href="/inscription" class="btnDislabel">inscription</a></li>
+                </ul>
+            </div>
         </div>
 
         <!-- === === === === === === === === === ===
