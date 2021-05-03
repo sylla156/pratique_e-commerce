@@ -27,3 +27,11 @@
 .btnDislabel {
     @extend %btnDislabel
 }
+
+.alertDanger {
+    @extend  %alertDanger;
+}
+
+.alertGood {
+    @extend %alertGood;
+}

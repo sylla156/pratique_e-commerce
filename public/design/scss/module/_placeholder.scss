@@ -89,3 +89,24 @@
         height: 76vh;
     }
 }
+
+
+%alertDanger {
+    border: 1px solid $alertDangerBorderColor;
+    background-color: $alertDangerBackgroundColor;
+    color: $alertDangerTextColor;
+    @include boite(10px 10px,10px 30px);
+    text-align: center;
+    vertical-align: center;
+    
+
+}
+
+
+%alertGood {
+    border: 1px solid $alertGoodBorderColor;
+    background-color: $alertGoodBackgroundColor;
+    color: $alertGoodTextColor;
+    @include boite(10px 20px,10px 30px);
+    text-align:justify;
+}

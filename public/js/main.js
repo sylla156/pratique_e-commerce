@@ -20,7 +20,7 @@ sliderForCategory.execute();
 //=== === === === === === === === === === === === === === === ===
 
 
-let btnNav = document.querySelector('.main__header--btnNav-img');
+let btnNav = document.querySelector('.main__header--btnNav');
 let nav = document.querySelector('.main__nav');
 let contenueNav = document.querySelector('.main__nav--center--parentList');
 
@@ -48,4 +48,7 @@ let carouselBtnNext = document.querySelector('.main__carousel--btnNextCarousel')
 let carouselBtnPrev = document.querySelector('.main__carousel--btnPrevCarousel');
 let carouselSelectorELement = document.querySelector('.main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel');
 let carou = new carousel(carouselMAin,carouselAllChild,carouselBtnNext,carouselBtnPrev,carouselSelectorELement);
-carou.execute();
+
+if (location.pathname  === "/"){
+    carou.execute();
+}

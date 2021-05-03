@@ -91,16 +91,37 @@
   }
 }
 
+.alertDanger {
+  border: 1px solid #ff0000;
+  background-color: #f06f6fba;
+  color: #5e0a0ade;
+  padding: 10px 10px;
+  margin: 10px 30px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.alertGood {
+  border: 1px solid #00ff00;
+  background-color: #89fc89bd;
+  color: #087e08d4;
+  padding: 10px 20px;
+  margin: 10px 30px;
+  text-align: justify;
+}
+
 body {
   padding: 0px;
   margin: 0px;
   background-color: #f7f2f2;
   color: #000000;
+  overflow-x: hidden;
 }
 
 .main {
   padding: 0px;
   margin: 0px;
+  position: relative;
 }
 .main__header {
   display: flex;
@@ -206,6 +227,10 @@ body {
   grid-area: btnNav;
   padding: 0px;
   margin: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
 }
 .main__header--btnNav img {
   display: flex;
@@ -213,6 +238,27 @@ body {
   align-items: center;
   padding: 0px 30%;
   margin: 0px;
+}
+.main__header--btnNav-userName, .main__header--btnNav-userImg {
+  padding: 10px;
+  margin: 0;
+}
+.main__header--btnNav-userName {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-transform: capitalize;
+  padding: 0px 0px 0px 10px;
+  margin: 0;
+}
+.main__header--btnNav-userImg {
+  padding: initial;
+  margin: initial;
+  padding: 20px;
+  margin: 0px;
+  border-radius: 50%;
+  background-color: grey;
 }
 .main__category {
   z-index: 2;
@@ -266,7 +312,6 @@ body {
   list-style: none;
 }
 .main__carousel {
-  position: absolute;
   padding: 0px;
   margin: 0px;
   z-index: -1;
@@ -364,13 +409,20 @@ body {
 .form {
   padding: 0px;
   margin: 0px;
-  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .form form {
+  height: 40vh;
+  width: 50vw;
   padding: 100px;
   margin: 0px;
   background-color: #ffffff;

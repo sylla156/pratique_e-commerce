@@ -9,7 +9,7 @@ body {
     @include boite(0px, 0px);
     background-color: $principaleBackgroundColor;
     color: $principaleTextColor;
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 //=== === === === === === === === === ===
@@ -17,6 +17,7 @@ body {
 
 .main {
     @include boite(0px, 0px);
+    position: relative;
 
     &__header {
         @include flex(space-around);
@@ -125,17 +126,41 @@ body {
             flex: 1;
             grid-area: btnNav;
             @include boite;
+            @include flex(space-around, center);
+            cursor: pointer;
 
             img {
                 @include flex(flex-end);
                 @include boite(0px 30%, 0px);
             }
+
+            &-userName,
+            &-userImg {
+                @include boite(10px, 0);
+            }
+
+            &-userName {
+                font-weight: 700;
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                font-style: italic;
+                text-transform: capitalize;
+                @include boite(0px 0px 0px 10px, 0);
+            }
+
+            &-userImg {
+                @include boite(initial, initial);
+                @include boite(20px);
+                border-radius: 50%;
+                background-color: grey;
+            }
+
         }
     }
 
 
     &__category {
-        z-index:2;
+        z-index: 2;
         width: 0px;
         background-color: $secondaryBackgroundColor;
         color: $principaleTextColor;
@@ -159,7 +184,7 @@ body {
 
 
     &__nav {
-        z-index:2;
+        z-index: 2;
         width: 0px;
         background-color: $secondaryBackgroundColor;
         color: $principaleTextColor;
@@ -167,18 +192,20 @@ body {
         position: absolute;
         right: 0;
         height: 40vh !important;
+
         &--center {
             @include flex;
-            @include boite(10px,10px);
+            @include boite(10px, 10px);
+
             &--parentList {
                 opacity: 0;
                 @include boite(10px, 10px);
-                
+
                 @include flex {
                     flex-direction: column;
                     gap: 40px;
                 }
-                
+
                 &-child {
                     list-style: none;
                 }
@@ -188,7 +215,6 @@ body {
 
 
     &__carousel {
-        position: absolute;
         @include boite;
         z-index: -1;
 
@@ -227,6 +253,7 @@ body {
             @include media('mobile') {
                 @include dimension(95vw, 45vh);
             }
+
             // pour les selector du carousel les points rond
             div {
 
@@ -272,30 +299,42 @@ body {
     }
 }
 
-.form{
+.form {
     @include boite;
-    height: 80vh;
-    width: 100vw; 
+    @include flex {
+        flex-direction: column;
+    };
+    height: 100vh;
+    width: 100vw;
     @include flex;
+    overflow: hidden;
 
     form {
+        height: 40vh;
+        width: 50vw;
+
         @include media('mobile') {
             @include boite(50px);
         }
+
         @include boite(100px);
         background-color: $secondaryBackgroundColor;
+
         @include flex {
             flex-direction: column;
         }
 
         input {
+
             border: none;
             outline: none;
             border-bottom: 1px solid black;
+
             @include media('mobile') {
                 width: 50vw;
                 height: 20px;
             }
+
             height: 20px;
             width: 60vw;
             background-color: $principaleBackgroundColor;
