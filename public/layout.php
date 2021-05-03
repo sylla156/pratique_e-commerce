@@ -105,7 +105,7 @@
                     <img src="./picture/icone/direction.png" alt="prev" class="icone" srcset="">
                 </div>
             </div>
-        <?php } ?>
+        <?php }?>
 
         <!-- 
         <section class="main__section">
