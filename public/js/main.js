@@ -20,7 +20,7 @@ sliderForCategory.execute();
 //=== === === === === === === === === === === === === === === ===
 
 
-let btnNav = document.querySelector('.main__header--btnNav-img');
+let btnNav = document.querySelector('.main__header--btnNav');
 let nav = document.querySelector('.main__nav');
 let contenueNav = document.querySelector('.main__nav--center--parentList');
 

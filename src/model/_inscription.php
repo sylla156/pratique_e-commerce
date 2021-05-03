@@ -21,9 +21,9 @@ if (
     $password_test = $_POST['passwordTest'];
 
 
-    $verifierNom =  Verifier::nom($nom) === true ? true : $inscriptionError .= "que votre pseudo et pas espace";
-    $verifierTel = Verifier::tel($tel) === true ? true : $inscriptionError .= "le numero de telephone sans indice";
-    $verifierPassword = Verifier::passwordAll($password, $password_test) === true ? true : $inscriptionError .= "password plus de 8 caractere ou chiffre et les deux doit etre pareil";
+    $verifierNom =  Verifier::nom($nom) === true ? true : $inscriptionError .= "*votre pseudo est incorrect</br>";
+    $verifierTel = Verifier::tel($tel) === true ? true : $inscriptionError .= "*le numero de telephone est incorrect </br>";
+    $verifierPassword = Verifier::passwordAll($password, $password_test) === true ? true : $inscriptionError .= "*le mote de passe plus de 8 caractere ou chiffre et les deux doit etre pareil</br>";
 
     $db = new Insert();
 
@@ -35,8 +35,9 @@ if (
     ) {
         try {
             $db->insereUser($nom, $tel, $email, $password);
+            echo "<script>location.pathname = '/'</script>";
         } catch (PDOException $e) {
-            $inscriptionError .= "email present dans notre base de donne";
+            $inscriptionError .= "email present dans notre base de donne<br/>";
         }
     }
 }

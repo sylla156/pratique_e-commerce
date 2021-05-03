@@ -14,9 +14,11 @@ if (isset($_POST['email']) and isset($_POST['password'])) {
 
         if ($verifieOfUser->email($email) and $verifieOfUser->password($password)) {
             $InfoOfUser = $verifieOfUser->verifieUserForConnexion($email, $password);
-            if ($InfoOfUser !== false) {
+            if ($InfoOfUser !== null) {
                 $_SESSION['user'] = $InfoOfUser;
                 echo "<script>location.pathname = '/'</script>";
+            } elseif ($InfoOfUser === null) {
+                $connexionError = "</br>connexion ou password incorrect<br/>";
             }
         }
     }

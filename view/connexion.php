@@ -1,9 +1,14 @@
 <?php
 
 declare(strict_types=1);
+require_once __DIR__ . DIRECTORY_SEPARATOR . "../src/model/_connexion.php";
+$error = $connexionError ?? "";
 
 ?>
 <div class="form">
+<?php if (strlen($error) >= 5){ ?>
+        <p class="alertDanger"><?= $error ?></p>
+    <?php }?>
     <form action="/connexion" method="post">
         <h3>connexion</h3>
         <br>
@@ -18,7 +23,6 @@ declare(strict_types=1);
 
 
 <?php
-require_once __DIR__ . DIRECTORY_SEPARATOR . "../src/model/_connexion.php";
 ?>
 
 

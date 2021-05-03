@@ -3,11 +3,14 @@
 declare(strict_types=1);
 
 require_once __DIR__ . DIRECTORY_SEPARATOR . "../src/model/_inscription.php";
-$alert = $inscriptionError ?? "inscription reussie";
+$error = $inscriptionError ?? null;
+$good = "inscription valider";
 ?>
 
 <div class="form">
-        <p><?= $alert ?></p>
+    <?php if (strlen($error) >= 5){ ?>
+        <p class="alertDanger"><?= $error ?></p>
+    <?php }?>
     <form action="/inscription" method="post">
         <h3>inscription</h3>
         <br>
