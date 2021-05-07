@@ -3,7 +3,7 @@
 <rulset name="src">
    <description>the all description</description>
 
-   <file>src/*</file>
+   <file>src</file>
    <file>view</file>
    <file>public/index.php</file>
    <!-- <file>public/layout.php</file> -->
