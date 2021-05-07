@@ -6,12 +6,22 @@ use App\class\database\Take;
 use App\class\database\Connexion;
 use App\class\database\Hash;
 
+/**
+ * [Description Verifier]
+ * elle permet e verifier le valeur des utlisateur
+ * @author sylla ibrahim <s67986601àgmail.com>
+ */
 class Verifier extends Connexion
 {
 
 
 
-    public function verifieUserForConnexion(string $email, string $password)
+    /**
+     * @param string $email
+     * @param string $password
+     * @return array|bool
+     */
+    public function verifieUserForConnexion(string $email, string $password): array|bool
     {
         $this->connecter();
         $take = new Take();
@@ -25,7 +35,12 @@ class Verifier extends Connexion
         }
     }
 
-    public function verifieAdmin(string $email, string $password)
+    /**
+     * @param string $email
+     * @param string $password
+     * @return array
+     */
+    public function verifieAdmin(string $email, string $password): array|bool
     {
         $this->connecter();
         $take = new Take();
@@ -39,7 +54,11 @@ class Verifier extends Connexion
         }
     }
 
-    public static function nom($nom)
+    /**
+     * @param string $nom
+     * @return bool
+     */
+    public static function nom(string $nom): bool
     {
         if ($nom == "") {
             return false;
@@ -65,7 +84,11 @@ class Verifier extends Connexion
 
 
 
-    public static function tel($tel)
+    /**
+     * @param mixed $tel
+     * @return bool
+     */
+    public static function tel($tel): bool
     {
         if ($tel == "") {
             return false;
@@ -97,7 +120,11 @@ class Verifier extends Connexion
 
 
 
-    public static function email($email)
+    /**
+     * @param string $email
+     * @return bool
+     */
+    public static function email(string $email): bool
     {
         $test = "/^([a-zA-Z0-9_\-\.]+)@(gmail|yahoo|Outlook|Posteo|AOL|GMX+)\.(com|net{2,5})$/";
         if ($email == "") {
@@ -120,7 +147,12 @@ class Verifier extends Connexion
 
 
 
-    public static function passwordAll($password, $password_test)
+    /**
+     * @param string $password
+     * @param string $password_test
+     * @return bool
+     */
+    public static function passwordAll(string $password, string $password_test): bool
     {
         if ($password == "" and $password_test == "") {
             return false;
@@ -134,7 +166,11 @@ class Verifier extends Connexion
     }
 
 
-    public static function password($password)
+    /**
+     * @param string $password
+     * @return bool
+     */
+    public static function password(string $password): bool
     {
         if (strlen($password) >= 8) {
             return true;
@@ -145,7 +181,12 @@ class Verifier extends Connexion
 
 
 
-    public static function reference($reference, $typeTable)
+    /**
+     * @param int $reference
+     * @param string $typeTable
+     * @return bool
+     */
+    public static function reference(int $reference, string $typeTable): bool
     {
         if (gettype($reference) == 'integer') {
             $take = new Take();
