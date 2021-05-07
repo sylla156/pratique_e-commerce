@@ -8,7 +8,7 @@ $good = "inscription valider";
 ?>
 
 <div class="form">
-    <?php if (strlen($error) >= 5){ ?>
+    <?php if (strlen($error) >= 5) { ?>
         <p class="alertDanger"><?= $error ?></p>
     <?php }?>
     <form action="/inscription" method="post">
