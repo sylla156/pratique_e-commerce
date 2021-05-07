@@ -11,7 +11,7 @@
  *   -sera toggle a chaque click de la class
  *   -mais la width dans un settimeout
  *   -et opacity dans un setimeout encore sur le flisBloc
- *  @author sylle ibrahim
+ *  @author sylle ibrahim <s67986601@gmail.com>
  */
  class slide {
     /**
