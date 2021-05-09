@@ -7,6 +7,9 @@ use App\class\database\Verifier;
 
 $inscriptionError = "";
 
+//ont verifie les donner puis nous l'integrons dans notre base de bonnee puis le rediriger sur la page principale;
+// sinon au cas de donner fausse ont l'envoie ce que pose probleme;
+
 if (
     isset($_POST['name']) and
     isset($_POST['password']) and
@@ -21,9 +24,15 @@ if (
     $password_test = $_POST['passwordTest'];
 
 
-    $verifierNom =  Verifier::nom($nom) === true ? true : $inscriptionError .= "*votre pseudo est incorrect</br>";
-    $verifierTel = Verifier::tel($tel) === true ? true : $inscriptionError .= "*le numero de telephone est incorrect </br>";
-    $verifierPassword = Verifier::passwordAll($password, $password_test) === true ? true : $inscriptionError .= "*le mote de passe plus de 8 caractere ou chiffre et les deux doit etre pareil</br>";
+    $verifierNom =  Verifier::nom($nom) === true
+        ? true
+        : $inscriptionError .= "*votre pseudo est incorrect </br>";
+    $verifierTel = Verifier::tel($tel) === true
+        ? true
+        : $inscriptionError .= "*le numero de telephone est incorrect </br>";
+    $verifierPassword = Verifier::passwordAll($password, $password_test) === true
+        ? true
+        : $inscriptionError .= "*le mote de passe plus de 8 caractere ou chiffre et les deux doit etre pareil</br>";
 
     $db = new Insert();
 

@@ -30,13 +30,6 @@ sliderForNav.setStyleNoClick('noClick');
 sliderForNav.execute();
 
 
-//=== === === === === === === === === === === === === === === ===
-//=== === === === === === === === === === === === === === === ===
-//=== === === fin des slide de categorie et connexion === === ===
-//=== === === === === === === === === === === === === === === ===
-//=== === === === === === === === === === === === === === === ===
-
-
 
 //=== === === === === === === === === === === === === === === ===
 //=== selection des element carousel puis use la class carousel===
@@ -48,7 +41,7 @@ let carouselBtnNext = document.querySelector('.main__carousel--btnNextCarousel')
 let carouselBtnPrev = document.querySelector('.main__carousel--btnPrevCarousel');
 let carouselSelectorELement = document.querySelector('.main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel');
 let carou = new carousel(carouselMAin,carouselAllChild,carouselBtnNext,carouselBtnPrev,carouselSelectorELement);
-
+// le carousel que pour la page principale
 if (location.pathname  === "/"){
     carou.execute();
 }

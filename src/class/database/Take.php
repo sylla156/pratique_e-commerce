@@ -4,10 +4,19 @@ namespace App\class\database;
 
 use App\class\database\Connexion;
 
+/**
+ * [Description Take]
+ * elle permet de prendre les elements dans ma bas de donnnes
+ * @author sylla ibrahim <s6798661@gmail.com>
+ */
 class Take extends Connexion
 {
 
 
+    /**
+     * @param string $email email pour identifier la personne
+     * @return array c'est donne retouner
+     */
     public function takeDataUser(string $email): array
     {
 
@@ -20,6 +29,10 @@ class Take extends Connexion
     }
 
 
+    /**
+     * @param string $email
+     * @return array
+     */
     public function takeDataAdmin(string $email): array
     {
 
@@ -32,6 +45,9 @@ class Take extends Connexion
     }
 
 
+    /**
+     * @return array renvoie tous les admis
+     */
     public function takeAllDataAdmin(): array
     {
 
@@ -44,6 +60,10 @@ class Take extends Connexion
     }
 
 
+    /**
+     * @param string $reference
+     * @return bool
+     */
     public function takeAdminrWithReference(string $reference): bool
     {
 
@@ -59,6 +79,10 @@ class Take extends Connexion
         }
     }
 
+    /**
+     * @param string $reference prend un utlisateur selon sont id
+     * @return bool
+     */
     public function takeUserWithReference(string $reference): bool
     {
 
@@ -75,6 +99,9 @@ class Take extends Connexion
     }
 
 
+    /**
+     * @return array prend tous les utilisateur;
+     */
     public function takeElementAllUser(): array
     {
         $this->connecter();
