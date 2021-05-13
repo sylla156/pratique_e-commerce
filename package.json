@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sylla156/pratique_e-commerce#readme",
   "dependencies": {
+    "npm": "^7.12.1",
     "sassdoc": "^2.7.3"
   }
 }

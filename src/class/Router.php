@@ -43,7 +43,7 @@ final class Router
         $this->redirection = 0;
         foreach ($this->url_name as $key => $value) {
             $this->route->map('GET|POST', $value, function () {
-                if ($_SERVER['REQUEST_URI'] == '/') {
+                if ($_SERVER['REQUEST_URI'] == '/' || $_GET != null) {
                 } else {
                     $this->redirection = $_SERVER['REQUEST_URI'];
                     require __DIR__ . DIRECTORY_SEPARATOR . "../../view/" . $this->redirection . ".php";

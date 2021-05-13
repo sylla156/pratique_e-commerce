@@ -5,13 +5,6 @@ namespace App\class\database;
 use PDO;
 use PDOException;
 
-/**
- * [Description Connexion]
- * le class mere de la base de donne
- * elle est extensier dans tous c'est enfant
- * @author sylla ibrahim <s67986601@gmail.com>
- * @abstract
- */
 abstract class Connexion
 {
     public $db;
@@ -21,9 +14,6 @@ abstract class Connexion
         $this->db = null;
     }
 
-    /**
-     * c'est celui si qui cree nos table automatiquement meme
-     */
     public function connecter()
     {
         try {
@@ -58,11 +48,8 @@ abstract class Connexion
                 `email` varchar(100),pass varchar(100))";
 
             $this->db->exec($sql);
-            return true;
         } catch (PDOException $e) {
             echo $e->getMessage();
-            echo "erreur a la connexion de la base de donnees";
-            return false;
         }
     }
 }

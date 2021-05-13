@@ -22,8 +22,12 @@ body {
     &__header {
         @include flex(space-around);
         @include boite(auto, 0px);
-
+        position: fixed;
+        height: 65px;
+        z-index: 10;
+        width: 100vw;
         @include media('mobile') {
+            height: 140px;
             display: grid;
             grid-template-columns: repeat(1fr, 5);
             grid-template-rows: repeat(1fr, 2);
@@ -98,6 +102,10 @@ body {
                     color: grey;
                     font-style: italic;
                     text-indent: 20px;
+                    @include media('mobile') {
+                        font-size: 0.8em;
+                        height: 50%;
+                    }
                 }
             }
 
@@ -105,7 +113,8 @@ body {
                 width: 20%;
 
                 @include media('mobile') {
-                    width: 25%;
+                    width: 18%;
+                    font-size: 0.8em;
                 }
             }
 
@@ -165,7 +174,11 @@ body {
         background-color: $secondaryBackgroundColor;
         color: $principaleTextColor;
         transition: all 0.6s;
-        position: absolute;
+        position: fixed;
+        @include boite(0px,65px 0px 0px 0px);
+        @include media('mobile') {
+            @include boite(0px,140px 0px 0px 0px);
+        }
 
         &--parentList {
             opacity: 0;
@@ -189,7 +202,11 @@ body {
         background-color: $secondaryBackgroundColor;
         color: $principaleTextColor;
         transition: all 0.6s;
-        position: absolute;
+        position: fixed;
+        @include boite(0px,65px 0px 0px 0px);
+        @include media('mobile') {
+            @include boite(0px,140px 0px 0px 0px);
+        }
         right: 0;
         height: 40vh !important;
 
@@ -215,7 +232,8 @@ body {
 
 
     &__carousel {
-        @include boite;
+        position: relative;
+        top: 65px;
         z-index: -1;
 
         @include flex {
@@ -233,7 +251,7 @@ body {
 
         @include media('mobile') {
             @include dimension(100vw, 50vh);
-
+            top: 150px;
         }
 
         // background-color: #000;
@@ -343,4 +361,67 @@ body {
             background-color: $principaleBackgroundColor;
         }
     }
+}
+
+.article {
+    @include boite(0px,100px 0px 0px  0px);
+    @include media('mobile') {
+    @include boite(0px,160px 0px 0px  0px);
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100vw;
+    background-color: $secondaryBackgroundColor;
+
+    &__items {
+        display: block;
+        @include boite(0px,1vw);
+        width: 23vw;
+        @include media('mobile') {
+            @include boite(0px,5px 0px 0px 1vw);
+            width: 32vw;
+        }
+        &--img {
+            width: 23vw;
+            height: 12vw;
+            @include media('mobile') {
+                width: 32vw;
+                height: 23vw;
+                @include boite;
+            }
+        }
+
+        &--price {
+            @include boite;
+            @include media('mobile') {
+                font-size: 0.6em;
+            }
+
+        }
+
+        &--decscribe {
+            // color: red;
+            @include boite;
+            @include media('mobile') {
+                font-size: 0.5em;
+            }
+        }
+
+        &--btn {
+            display: flex;
+            justify-content: flex-start ;
+            align-items: center;
+            @include boite(0px ,15px 0px);
+            a{
+                font-size: 0.9rem;
+                @include boite(5px,0px);
+                @include media('mobile') {
+                    font-size: 0.6em;
+                }
+            }
+        }
+
+    }
+
 }

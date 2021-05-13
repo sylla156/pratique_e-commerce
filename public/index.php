@@ -23,5 +23,5 @@ $whoops = new Run();
 $whoops->pushHandler(new PrettyPageHandler());
 $whoops->register();
 
-$router = new Router("/connexion", "/inscription", "/", "/deconnexion");
+$router = new Router("/connexion", "/inscription", "/", "/deconnexion", "/article", "/panier");
 $router->execute();

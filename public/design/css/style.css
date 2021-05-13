@@ -4,7 +4,7 @@
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
   .icone {
-    width: 18px;
+    width: 13px;
   }
 }
 
@@ -20,8 +20,6 @@
   text-decoration: none;
   background-color: #063884;
   border: inherit;
-  padding: 20px 25px;
-  margin: 5px;
   font-size: medium;
   font-style: italic;
   transition: all 0.6;
@@ -32,11 +30,9 @@
 }
 
 .btnDislabel {
-  padding: 20px 25px;
-  margin: 5px;
   text-decoration: none;
   text-transform: capitalize;
-  border: 2px solid #063884;
+  border: 1px solid #063884;
   border: 20%;
   color: #063884;
   font-size: medium;
@@ -129,10 +125,15 @@ body {
   align-items: center;
   padding: auto;
   margin: 0px;
+  position: fixed;
+  height: 65px;
+  z-index: 10;
+  width: 100vw;
   background-color: #ffffff;
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
   .main__header {
+    height: 140px;
     display: grid;
     grid-template-columns: repeat(1fr, 5);
     grid-template-rows: repeat(1fr, 2);
@@ -201,12 +202,19 @@ body {
   font-style: italic;
   text-indent: 20px;
 }
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .main__header--form input:nth-child(1)::placeholder {
+    font-size: 0.8em;
+    height: 50%;
+  }
+}
 .main__header--form input:nth-child(2) {
   width: 20%;
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
   .main__header--form input:nth-child(2) {
-    width: 25%;
+    width: 18%;
+    font-size: 0.8em;
   }
 }
 .main__header--basket {
@@ -266,7 +274,15 @@ body {
   background-color: #ffffff;
   color: #000000;
   transition: all 0.6s;
-  position: absolute;
+  position: fixed;
+  padding: 0px;
+  margin: 65px 0px 0px 0px;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .main__category {
+    padding: 0px;
+    margin: 140px 0px 0px 0px;
+  }
 }
 .main__category--parentList {
   opacity: 0;
@@ -287,9 +303,17 @@ body {
   background-color: #ffffff;
   color: #000000;
   transition: all 0.6s;
-  position: absolute;
+  position: fixed;
+  padding: 0px;
+  margin: 65px 0px 0px 0px;
   right: 0;
   height: 40vh !important;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .main__nav {
+    padding: 0px;
+    margin: 140px 0px 0px 0px;
+  }
 }
 .main__nav--center {
   display: flex;
@@ -312,8 +336,8 @@ body {
   list-style: none;
 }
 .main__carousel {
-  padding: 0px;
-  margin: 0px;
+  position: relative;
+  top: 65px;
   z-index: -1;
   display: flex;
   justify-content: center;
@@ -337,6 +361,7 @@ body {
   .main__carousel {
     width: 100vw;
     height: 50vh;
+    top: 150px;
   }
 }
 .main__carousel--main {
@@ -449,6 +474,82 @@ body {
   .form form input {
     width: 50vw;
     height: 20px;
+  }
+}
+
+.article {
+  padding: 0px;
+  margin: 100px 0px 0px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100vw;
+  background-color: #ffffff;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .article {
+    padding: 0px;
+    margin: 160px 0px 0px 0px;
+  }
+}
+.article__items {
+  display: block;
+  padding: 0px;
+  margin: 1vw;
+  width: 23vw;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .article__items {
+    padding: 0px;
+    margin: 5px 0px 0px 1vw;
+    width: 32vw;
+  }
+}
+.article__items--img {
+  width: 23vw;
+  height: 12vw;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .article__items--img {
+    width: 32vw;
+    height: 23vw;
+    padding: 0px;
+    margin: 0px;
+  }
+}
+.article__items--price {
+  padding: 0px;
+  margin: 0px;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .article__items--price {
+    font-size: 0.6em;
+  }
+}
+.article__items--decscribe {
+  padding: 0px;
+  margin: 0px;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .article__items--decscribe {
+    font-size: 0.5em;
+  }
+}
+.article__items--btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
+  margin: 15px 0px;
+}
+.article__items--btn a {
+  font-size: 0.9rem;
+  padding: 5px;
+  margin: 0px;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .article__items--btn a {
+    font-size: 0.6em;
   }
 }
 
