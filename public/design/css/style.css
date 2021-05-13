@@ -129,6 +129,7 @@ body {
   align-items: center;
   padding: auto;
   margin: 0px;
+  position: sticky;
   background-color: #ffffff;
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
@@ -450,6 +451,30 @@ body {
     width: 50vw;
     height: 20px;
   }
+}
+
+.article {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  background-color: #ffffff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+}
+.article__items {
+  padding: 0px;
+  margin: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+  width: 23vw;
+}
+.article__items--img {
+  width: 23vw;
+  height: 12vw;
 }
 
 /*# sourceMappingURL=style.css.map */

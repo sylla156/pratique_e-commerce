@@ -22,7 +22,7 @@ body {
     &__header {
         @include flex(space-around);
         @include boite(auto, 0px);
-
+        position: sticky;
         @include media('mobile') {
             display: grid;
             grid-template-columns: repeat(1fr, 5);
@@ -301,9 +301,12 @@ body {
 
 .form {
     @include boite;
+
     @include flex {
         flex-direction: column;
-    };
+    }
+
+    ;
     height: 100vh;
     width: 100vw;
     @include flex;
@@ -340,4 +343,34 @@ body {
             background-color: $principaleBackgroundColor;
         }
     }
+}
+
+.article {
+    @include boite;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: $secondaryBackgroundColor;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
+
+    &__items {
+        @include boite(0px, 10px);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        flex-wrap: wrap;
+        width: 23vw;
+        &--img {
+            width: 23vw;
+            height: 12vw;
+        }
+
+        &--price {}
+
+        &--decscribe {
+            // color: red;
+        }
+    }
+
 }
