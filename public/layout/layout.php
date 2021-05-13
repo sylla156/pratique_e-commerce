@@ -11,11 +11,8 @@
 </head>
 
 <body>
-
-    <?php require_once "layoutModule/header.php" ?>
-    <?php require_once "layoutModule/carousel.php" ?>
-    <?php require_once "layoutModule/article.php" ?>
-
+    <?php require_once "header.php"; ?>
+    <?php require_once "article.php"; ?>
 </body>
 
 </html>

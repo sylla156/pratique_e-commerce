@@ -90,7 +90,7 @@
     }
 }
 
-/// pour les alert an cas erreur 
+
 %alertDanger {
     border: 1px solid $alertDangerBorderColor;
     background-color: $alertDangerBackgroundColor;
@@ -102,7 +102,7 @@
 
 }
 
-/// pour les cas de success
+
 %alertGood {
     border: 1px solid $alertGoodBorderColor;
     background-color: $alertGoodBackgroundColor;
