@@ -61,19 +61,19 @@
             <ul class="main__nav--center--parentList">
                 <?php if (isset($userName)) { ?>
                     <li class="main__nav--center--parentList-child ">
-                        <a href="/parametre" class="btnActive">parametre</a>
+                        <a href="/parametre" class="btnActive" style="padding: 20px 25px; margin: 5px;">parametre</a>
                     </li>
                     <p class="lineBr"></p>
                     <li class="main__nav--center--parentList-child ">
-                        <a href="/deconnexion" class="btnDislabel">deconnexion</a>
+                        <a href="/deconnexion" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">deconnexion</a>
                     </li>
                 <?php } else { ?>
                     <li class="main__nav--center--parentList-child ">
-                        <a href="/connexion" class="btnActive">connexion</a>
+                        <a href="/connexion" class="btnActive" style="padding: 20px 25px; margin: 5px;">connexion</a>
                     </li>
                     <p class="lineBr"></p>
                     <li class="main__nav--center--parentList-child ">
-                        <a href="/inscription" class="btnDislabel">inscription</a>
+                        <a href="/inscription" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">inscription</a>
                     </li>
                 <?php } ?>
             </ul>

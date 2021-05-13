@@ -1,5 +1,5 @@
 <main class="main">
-    <?php if ($_SERVER['REQUEST_URI'] === '/') { ?>
+    <?php if ($_SERVER['REQUEST_URI'] === '/' || $_GET != null) { ?>
         <div class="main__carousel">
             <div class="main__carousel--btnPrevCarousel">
                 <img src="./picture/icone/direction.png" alt="next" class="icone" style="transform: rotate(180deg);">

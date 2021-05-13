@@ -3,7 +3,7 @@
 // et comme cursor pointer
 %icone {
     @include media('mobile') {
-        width: 18px;
+        width: 13px;
     }
 
     width: 21px;
@@ -24,7 +24,6 @@
     text-decoration: none;
     background-color: $btnColor;
     border: inherit;
-    @include boite(20px 25px, 5px);
     font-size: medium;
     font-style: italic;
     transition: all 0.6;
@@ -35,10 +34,9 @@
 }
 
 %btnDislabel {
-    @include boite(20px 25px, 5px);
     text-decoration: none;
     text-transform: capitalize;
-    border: 2px solid $btnColor;
+    border: 1px solid $btnColor;
     border: 20%;
     color: $btnColor;
     font-size: medium;
