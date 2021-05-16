@@ -35,3 +35,7 @@
 .alertGood {
     @extend %alertGood;
 }
+
+.visible {
+    @extend %visible;
+}
