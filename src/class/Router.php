@@ -46,7 +46,12 @@ final class Router
                 if (empty($_SERVER['PATH_INFO'])) {
                 } else {
                     $this->redirection = $_SERVER['PATH_INFO'];
-                    require __DIR__ . DIRECTORY_SEPARATOR . "../../view/" . $this->redirection . ".php";
+                    $path = __DIR__ . DIRECTORY_SEPARATOR . "../../view/" . $this->redirection . ".php";
+                    if (is_file($path)) {
+                        require_once $path;
+                    } else {
+                        require_once __DIR__ . "/../../view/error.php";
+                    }
                 }
             }, $this->redirection);
         }

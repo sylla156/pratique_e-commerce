@@ -1,5 +1,5 @@
-<main class="main">
-    <?php if (empty($_SERVER['PATH_INFO'])) { ?>
+<?php if (empty($_SERVER['PATH_INFO'])) { ?>
+    <main class="main">
         <div class="main__carousel">
             <div class="main__carousel--btnPrevCarousel">
                 <img src="./picture/icone/direction.png" alt="next" class="icone" style="transform: rotate(180deg);">
@@ -46,6 +46,5 @@
                 <img src="./picture/icone/direction.png" alt="prev" class="icone">
             </div>
         </div>
-    <?php } ?>
-
-</main>
+    </main>
+<?php } ?>

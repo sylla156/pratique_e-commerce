@@ -17,11 +17,15 @@ $userEmail = $_SESSION['user'][0]['email'] ?? null;
 $userPassword = $_SESSION['user'][0]['pass'] ?? null;
 $userTel = $_SESSION['user'][0]['tel'] ?? null;
 
+
+
+
 require_once __DIR__ . DIRECTORY_SEPARATOR . "layout.php";
 
 $whoops = new Run();
 $whoops->pushHandler(new PrettyPageHandler());
 $whoops->register();
 
-$router = new Router("/connexion", "/inscription", "/", "/deconnexion", "/article", "/panier");
+$router = new Router("/connexion", "/inscription", "/", "/deconnexion", "/article", "/panier", "/admin", "/admin/[a]");
 $router->execute();
+// dump($_SESSION);
