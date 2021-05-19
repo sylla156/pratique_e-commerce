@@ -1,6 +1,6 @@
 <?php
 
-$path = $_SERVER['REQUEST_URI'];
+$path = $_SERVER['PATH_INFO'] ?? "merde/rien/a/signaler";
 $tabPath = explode('/', $path);
 $avis = false;
 if ($tabPath[1] === "admin" || $tabPath[1] === "error") {
