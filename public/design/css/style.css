@@ -616,5 +616,51 @@ body {
   border-bottom: 1px solid #5628fe;
   box-shadow: 3px 5px 6px;
 }
+.admin__param {
+  background-color: #ffffff;
+  width: 70%;
+  padding: 20px;
+  margin: 140px auto;
+}
+@media all and (max-width: 1024px) and (min-width: 681px) {
+  .admin__param {
+    width: 90%;
+  }
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .admin__param {
+    width: 90%;
+    overflow-x: scroll;
+  }
+}
+.admin__param--title {
+  text-align: center;
+}
+.admin__param--form {
+  padding: 0px;
+  margin: 0px;
+}
+.admin__param--form input {
+  width: 20%;
+}
+.admin__param--form input:nth-child(1) {
+  width: 70% !important;
+}
+.admin__param--table {
+  width: 100%;
+  overflow-x: scroll;
+}
+.admin__param--table thead th {
+  text-align: center;
+}
+.admin__param--table tbody tr {
+  padding: 0px;
+  margin: 40px;
+}
+.admin__param--table tbody tr td {
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
 
 /*# sourceMappingURL=style.css.map */

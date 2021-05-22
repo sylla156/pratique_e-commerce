@@ -500,4 +500,50 @@ body {
             }
         }
     }
+
+    &__param {
+        background-color: $secondaryBackgroundColor;
+        width: 70%;
+        @include boite(20px, 140px auto);
+        @include media('tablette') {
+            width: 90%;
+        }
+
+        @include media('mobile') {
+            width: 90%;
+            overflow-x: scroll;
+        }
+        &--title {
+            text-align: center;
+        }
+        &--form {
+            @include boite;
+            input {
+                width: 20%;
+            }
+            input:nth-child(1) {
+                width: 70% !important;
+            }
+        }
+
+        &--table {
+            width: 100%;
+            overflow-x: scroll;
+            thead {
+                th {
+                    text-align: center;
+                }
+            }
+
+            tbody {
+                tr {
+                    @include boite(0px,40px);
+                    td {
+                        text-align: center;
+                        @include boite(10px,0px);
+                    }
+                }
+            }
+        }
+    }
 }

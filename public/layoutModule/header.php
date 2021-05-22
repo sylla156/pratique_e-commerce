@@ -12,7 +12,11 @@ if ($avis === false) { ?>
 
         <header class="main__header">
             <div class="main__header--btnCategory">
-                <img src="./picture/icone/list.png" class="main__header--btnCategory-img icone" alt="button de categorie">
+                <img 
+                    src="./picture/icone/list.png" 
+                    class="main__header--btnCategory-img icone" 
+                    alt="button de categorie"
+                >
             </div>
 
             <h4 class="main__header--title">
@@ -31,7 +35,11 @@ if ($avis === false) { ?>
                     <p class="main__header--btnNav-userName "><?= $userName ?>
                     <p class="main__header--btnNav-userImg "></p>
                 <?php } else { ?>
-                    <img src="./picture/icone/user.png" class="main__header--btnNav-img icone" alt="button de navigation">
+                    <img 
+                        src="./picture/icone/user.png" 
+                        class="main__header--btnNav-img icone" 
+                        alt="button de navigation"
+                    >
                 <?php } ?>
             </div>
         </header>
@@ -71,19 +79,27 @@ if ($avis === false) { ?>
                 <ul class="main__nav--center--parentList">
                     <?php if (isset($userName)) { ?>
                         <li class="main__nav--center--parentList-child ">
-                            <a href="/parametre" class="btnActive" style="padding: 20px 25px; margin: 5px;">parametre</a>
+                            <a href="/parametre" class="btnActive" style="padding: 20px 25px; margin: 5px;">
+                                parametre
+                            </a>
                         </li>
                         <p class="lineBr"></p>
                         <li class="main__nav--center--parentList-child ">
-                            <a href="/deconnexion" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">deconnexion</a>
+                            <a href="/deconnexion" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">
+                                deconnexion
+                            </a>
                         </li>
                     <?php } else { ?>
                         <li class="main__nav--center--parentList-child ">
-                            <a href="/connexion" class="btnActive" style="padding: 20px 25px; margin: 5px;">connexion</a>
+                            <a href="/connexion" class="btnActive" style="padding: 20px 25px; margin: 5px;">
+                                connexion
+                            </a>
                         </li>
                         <p class="lineBr"></p>
-                        <li class="main__nav--center--parentList-child ">
-                            <a href="/inscription" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">inscription</a>
+                        <li class="main__nav--center--parentList-child ">class
+                            <a href="/inscription" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">
+                                inscription
+                            </a>
                         </li>
                     <?php } ?>
                 </ul>
