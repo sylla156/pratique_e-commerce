@@ -11,7 +11,7 @@ class Verifier extends Connexion
 
 
 
-    public function verifieUserForConnexion(string $email, string $password)
+    public function verifieUser(string $email, string $password)
     {
         $this->connecter();
         $take = new Take();

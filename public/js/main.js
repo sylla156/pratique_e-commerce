@@ -47,8 +47,17 @@ let carouselAllChild = document.querySelectorAll('.main__carousel--main-parentEl
 let carouselBtnNext = document.querySelector('.main__carousel--btnNextCarousel');
 let carouselBtnPrev = document.querySelector('.main__carousel--btnPrevCarousel');
 let carouselSelectorELement = document.querySelector('.main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel');
-let carou = new carousel(carouselMAin,carouselAllChild,carouselBtnNext,carouselBtnPrev,carouselSelectorELement);
+let carou = new carousel(carouselMAin, carouselAllChild, carouselBtnNext, carouselBtnPrev, carouselSelectorELement);
 
-if (location.pathname  === "/"){
+if (location.pathname === "/") {
     carou.execute();
+}
+
+// click for connect addmin
+if (location.pathname === '/connexion') {
+    let btnAdminConnect = document.querySelector('.clickOfConnectAdmin');
+    let typeConnexion = document.querySelector('#typeConnexion');
+    btnAdminConnect.addEventListener('dblclick', () => {
+        typeConnexion.classList.toggle('visible');
+    });
 }

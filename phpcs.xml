@@ -6,7 +6,8 @@
    <file>src</file>
    <file>view</file>
    <file>public/index.php</file>
-   <!-- <file>public/layout.php</file> -->
+   <file>public/layoutModule</file>
+   <file>public/layout.php</file>
    <exclude-pattern>*/tests/*</exclude-pattern>
    <rule ref="PSR12">
  </rule>

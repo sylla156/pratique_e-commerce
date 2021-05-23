@@ -17,7 +17,7 @@
     cursor: pointer;
 }
 
-
+/// un simple btn blue
 %btnActive {
     color: white;
     text-transform: capitalize;
@@ -33,6 +33,7 @@
     }
 }
 
+/// pour le btn transparent
 %btnDislabel {
     text-decoration: none;
     text-transform: capitalize;
@@ -41,11 +42,18 @@
     color: $btnColor;
     font-size: medium;
     font-style: italic;
-    transition: all  0.6;
+    transition: all 0.6;
+
     &:hover {
         transform: scale(0.98);
         border-radius: (5px)
     }
+}
+
+/// pour le btn de supression
+%btnDelete {
+    background-color: red;
+    color: black;
 }
 
 /// c'est pour les hr pour lui donner un design voulue
@@ -56,6 +64,7 @@
     border-top: 1px solid black;
 }
 
+/// ici c'est un br aveec une ligne hr
 %lineBr {
     @include boite(0px 30px);
     height: 1px;
@@ -88,23 +97,29 @@
     }
 }
 
-
+/// en cas echec
 %alertDanger {
     border: 1px solid $alertDangerBorderColor;
     background-color: $alertDangerBackgroundColor;
     color: $alertDangerTextColor;
-    @include boite(10px 10px,10px 30px);
+    @include boite(10px 10px, 10px 30px);
     text-align: center;
     vertical-align: center;
-    
+
 
 }
 
-
+/// en cas de success
 %alertGood {
     border: 1px solid $alertGoodBorderColor;
     background-color: $alertGoodBackgroundColor;
     color: $alertGoodTextColor;
-    @include boite(10px 20px,10px 30px);
-    text-align:justify;
+    @include boite(10px 20px, 10px 30px);
+    text-align: justify;
+}
+
+/// pour rendre visible un display block
+%visible {
+    display: block !important;
+
 }
