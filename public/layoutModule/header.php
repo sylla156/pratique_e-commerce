@@ -96,7 +96,7 @@ if ($avis === false) { ?>
                             </a>
                         </li>
                         <p class="lineBr"></p>
-                        <li class="main__nav--center--parentList-child ">class
+                        <li class="main__nav--center--parentList-child ">
                             <a href="/inscription" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">
                                 inscription
                             </a>
