@@ -56,7 +56,8 @@ if ($_POST != null) {
                 $data = $take->takeElementAllAdmin();
                 break;
             case 'article':
-                $update->updateArticle($id, $_POST['nom'], $_POST['description'], intval($_POST['prix']), $_POST['img']);
+                $desc = $_POST['description'];
+                $update->updateArticle($id, $_POST['nom'], $desc, intval($_POST['prix']), $_POST['img']);
                 $data = $take->takeElementAllArticle();
                 break;
             case 'carousel':
