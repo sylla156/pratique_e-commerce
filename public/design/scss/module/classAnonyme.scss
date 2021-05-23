@@ -28,6 +28,10 @@
     @extend %btnDislabel
 }
 
+.btnDelete {
+    @extend %btnDelete;
+}
+
 .alertDanger {
     @extend  %alertDanger;
 }

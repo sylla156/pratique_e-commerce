@@ -3,6 +3,7 @@
     require_once __DIR__ . DIRECTORY_SEPARATOR . "../src/model/_admin.php";
     $DomVerifier  = (isset($_SESSION['admin']) and $_SERVER['PATH_INFO'] === '/admin');
     $DomBloc = $_GET == null;
+    !$DomBloc ? $btnMode = $_GET[$title] : $btnMode = "";
  if ($DomVerifier) { ?>
      <main class="admin">
          <header class="admin__header">
@@ -27,7 +28,7 @@
                      </a>
                  </div>
              </section>
-         <?php } elseif ($DomBloc == false) { ?>
+         <?php } elseif (!$DomBloc and $btnMode === "") { ?>
              <section class="admin__param">
                  <h2 class="admin__param--title"><?= $title ?></h2>
                  <form action="/admin" method="get" class="admin__param--form">
@@ -51,6 +52,10 @@
                                             if (strlen($value) >= 20) {
                                                 $value = substr($value, 0, 20) . "....";
                                             }
+
+                                            if ($key === 'img') {
+                                                $value = "<img src='$value' alt='image' width=100px>";
+                                            }
                                         }
                                         echo "<td>$value</td>";
                                  } ?>
@@ -59,8 +64,8 @@
                                          modifier
                                      </a>
                                  </td>
-                                 <td class="btnActive">
-                                     <a href="?<?= $title ?>=delete.<?= $dataSelection["id"] ?>" class="linkNoActive">
+                                 <td class="btnActive btnDelete">
+                                     <a href=" ?<?= $title ?>=delete.<?= $dataSelection["id"] ?>" class="linkNoActive"">
                                          suprimer
                                      </a>
                                  </td>
@@ -69,7 +74,9 @@
                      </tbody>
                  </table>
              </section>
-         <?php } ?>
+         <?php } elseif (!$DomBloc and $btnMode !== "") {
+                require_once __DIR__ . '/formInputForAdmin/module.php';
+         } ?>
      </main>
 
  <?php } elseif ($_SERVER['PATH_INFO'] !== '/admin' || empty($_SESSION['admin'])) {

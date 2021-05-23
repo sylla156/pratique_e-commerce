@@ -27,7 +27,6 @@
     font-size: medium;
     font-style: italic;
     transition: all 0.6;
-
     &:hover {
         transform: scale(0.98);
         border-radius: (5px)
@@ -49,6 +48,12 @@
         transform: scale(0.98);
         border-radius: (5px)
     }
+}
+
+/// pour le btn de supression
+%btnDelete {
+    background-color: red;
+    color: black;
 }
 
 /// c'est pour les hr pour lui donner un design voulue
