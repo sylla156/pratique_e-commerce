@@ -35,6 +35,7 @@
                      <input type="text" name="recherche" id="">
                      <input type="button" value="envoyer">
                  </form>
+                 <p class="admin__param--btnAdd"><a href="?<?=$title?>=add." class="btnActive linkNoActive">add</a></p>
                  <table class="admin__param--table">
                      <thead>
                          <?php
