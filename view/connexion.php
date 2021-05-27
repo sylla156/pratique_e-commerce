@@ -13,9 +13,9 @@ $error = $connexionError ?? "";
     <form action="/connexion" method="post">
         <h3 class="clickOfConnectAdmin">connexion</h3>
         <br>
-        <input type="email" placeholder="exemple@gmail.com" name="email">
+        <input type="email" placeholder="exemple@gmail.com" name="email" autocomplete="off">
         <br>
-        <input type="password" placeholder="**********" name="password">
+        <input type="password" placeholder="**********" name="password" autocomplete="off">
         <br>
         <select name="typeConnexion" id="typeConnexion">
             <option value="user">user</option>

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\class\database\Delete;
+use App\class\database\Insert;
 use App\class\database\Take;
 use App\class\database\Update;
 
@@ -69,10 +70,11 @@ if ($_POST != null) {
                 break;
         }
     } elseif ($zone === 'delete') {
+        $mode = $mode == "user" ? "client" : $mode;
         $delete = new Delete();
         $delete->deleteElementOftable($mode, $id);
         switch ($mode) {
-            case 'user':
+            case 'client':
                 $data = $take->takeElementAllUser();
                 break;
             case 'admin':
@@ -82,6 +84,30 @@ if ($_POST != null) {
                 $data = $take->takeElementAllArticle();
                 break;
             case 'carousel':
+                $data = $take->takeElementAllCarousel();
+                break;
+            default:
+                # code...
+                break;
+        }
+    } elseif ($zone === 'add') {
+        $insere = new Insert();
+        switch ($mode) {
+            case 'user':
+                $insere->insereUser($_POST['nom'], intval($_POST['tel']), $_POST['email'], $_POST['pass']);
+                $data = $take->takeElementAllUser();
+                break;
+            case 'admin':
+                $insere->insereAdmin($_POST['nom'], $_POST['email'], $_POST['pass']);
+                $data = $take->takeElementAllAdmin();
+                break;
+            case 'article':
+                $desc = $_POST['description'];
+                $insere->insereArticle($_POST['nom'], $desc, intval($_POST['prix']), $_POST['img']);
+                $data = $take->takeElementAllArticle();
+                break;
+            case 'carousel':
+                $insere->insereCarousel($_POST['img']);
                 $data = $take->takeElementAllCarousel();
                 break;
             default:
