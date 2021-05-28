@@ -50,7 +50,7 @@ class Take extends Connexion
     {
         try {
             $this->connecter();
-            $go = $this->db->prepare("SELECT id,nom,tel,email FROM `client` ");
+            $go = $this->db->prepare("SELECT * FROM `client` ");
             $go->execute(array());
             return $go->fetchALL(PDO::FETCH_ASSOC);
         } catch (\throwable $th) {

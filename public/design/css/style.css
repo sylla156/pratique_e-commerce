@@ -651,6 +651,10 @@ body {
 .admin__param--form input:nth-child(1) {
   width: 70% !important;
 }
+.admin__param--btnAdd a {
+  padding: 10px 20px;
+  margin: 0px;
+}
 .admin__param--table {
   width: 100%;
   overflow-x: scroll;
@@ -726,6 +730,69 @@ body {
     border-bottom: 1px solid #1818e1;
     outline: none;
   }
+}
+.admin__add {
+  background-color: #ffffff;
+  width: 70%;
+  padding: 20px;
+  margin: 140px auto;
+}
+@media all and (max-width: 1024px) and (min-width: 681px) {
+  .admin__add {
+    width: 90%;
+  }
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .admin__add {
+    width: 90%;
+    overflow-x: scroll;
+  }
+}
+.admin__add--title {
+  text-align: center;
+}
+.admin__add--form {
+  width: 90%;
+  padding: 0px;
+  margin: auto;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+.admin__add--form-label {
+  align-self: flex-start;
+  width: 80VW;
+  text-indent: 5px;
+  padding: 0px;
+  margin: 5px;
+  font-size: medium;
+  font-weight: bold;
+}
+@media all and (max-width: 1800px) and (min-width: 1025px) {
+  .admin__add--form-label {
+    width: 60vw;
+  }
+}
+.admin__add--form-input {
+  background-color: #f7f2f2;
+  width: 80vw;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid #1818e1;
+  outline: none;
+}
+@media all and (max-width: 1800px) and (min-width: 1025px) {
+  .admin__add--form-input {
+    width: 60vw;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid #1818e1;
+    outline: none;
+  }
+}
+.admin__add--form-id {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

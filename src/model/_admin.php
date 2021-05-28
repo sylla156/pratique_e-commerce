@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 use App\class\database\Delete;
+use App\class\database\Insert;
+use App\class\database\Search;
 use App\class\database\Take;
 use App\class\database\Update;
 
@@ -16,6 +18,16 @@ $title = 'article';
 $take = new Take();
 foreach ($_GET as $key => $value) {
     $title = $key;
+
+    for ($i = 0; $i < strlen($key); $i++) {
+        if ($key[$i] === '_') {
+            $searchTrue = true;
+            $searchMode = explode('_', $key);
+            $searchValue = $value;
+            $searchMode = $searchMode[0];
+        }
+    }
+
     switch ($key) {
         case 'user':
             $data = $take->takeElementAllUser();
@@ -29,9 +41,39 @@ foreach ($_GET as $key => $value) {
         case 'carousel':
             $data = $take->takeElementAllCarousel();
             break;
+        case $searchTrue === true:
+            $title = $searchMode;
+            $search = new Search();
+            switch ($searchMode) {
+                case 'user':
+                    $data = $search->searchElements($searchValue, $searchMode);
+                    $details = 'nom';
+                    break;
+                case 'article':
+                    $data = $search->searchElements($searchValue, $searchMode);
+                    $details = 'nom';
+                    break;
+                case 'admin':
+                    $data = $search->searchElements($searchValue, $searchMode);
+                    $details = 'nom';
+                    break;
+                case 'carousel':
+                    $data = $search->searchElements($searchValue, $searchMode);
+                    $details = "nom de l'image";
+                    break;
+                default:
+                    break;
+            }
+            break;
         default:
             $data = [];
+            require __DIR__ . DIRECTORY_SEPARATOR . "../../view/error.php";
+            die();
             break;
+    }
+
+    if ($data === []) {
+        $error = "rien de bon";
     }
 }
 if ($_POST != null) {
@@ -69,10 +111,11 @@ if ($_POST != null) {
                 break;
         }
     } elseif ($zone === 'delete') {
+        $mode = $mode == "user" ? "client" : $mode;
         $delete = new Delete();
         $delete->deleteElementOftable($mode, $id);
         switch ($mode) {
-            case 'user':
+            case 'client':
                 $data = $take->takeElementAllUser();
                 break;
             case 'admin':
@@ -85,7 +128,31 @@ if ($_POST != null) {
                 $data = $take->takeElementAllCarousel();
                 break;
             default:
-                # code...
+                die();
+                break;
+        }
+    } elseif ($zone === 'add') {
+        $insere = new Insert();
+        switch ($mode) {
+            case 'user':
+                $insere->insereUser($_POST['nom'], intval($_POST['tel']), $_POST['email'], $_POST['pass']);
+                $data = $take->takeElementAllUser();
+                break;
+            case 'admin':
+                $insere->insereAdmin($_POST['nom'], $_POST['email'], $_POST['pass']);
+                $data = $take->takeElementAllAdmin();
+                break;
+            case 'article':
+                $desc = $_POST['description'];
+                $insere->insereArticle($_POST['nom'], $desc, intval($_POST['prix']), $_POST['img']);
+                $data = $take->takeElementAllArticle();
+                break;
+            case 'carousel':
+                $insere->insereCarousel($_POST['img']);
+                $data = $take->takeElementAllCarousel();
+                break;
+            default:
+                die();
                 break;
         }
     }

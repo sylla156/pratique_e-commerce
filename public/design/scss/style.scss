@@ -531,6 +531,12 @@ body {
             }
         }
 
+        &--btnAdd {
+            a {
+                @include boite(10px 20px,0px);
+            }
+        }
+
         &--table {
             width: 100%;
             overflow-x: scroll;
@@ -574,8 +580,9 @@ body {
 
         &--form {
             width: 90%;
-            @include boite(0px,auto);
-            @include flex(start,start){
+            @include boite(0px, auto);
+
+            @include flex(start, start) {
                 flex-direction: column;
             }
 
@@ -583,9 +590,10 @@ body {
                 align-self: flex-start;
                 width: 80VW;
                 text-indent: 5px;
-                @include boite(0px,5px);
+                @include boite(0px, 5px);
                 font-size: medium;
                 font-weight: bold;
+
                 @include media('pc') {
                     width: 60vw;
                 }
@@ -607,6 +615,69 @@ body {
                 border: none;
                 border-bottom: 1px solid #1818e1;
                 outline: none;
+            }
+        }
+    }
+
+    &__add {
+        background-color: $secondaryBackgroundColor;
+        width: 70%;
+        @include boite(20px, 140px auto);
+
+        @include media('tablette') {
+            width: 90%;
+        }
+
+        @include media('mobile') {
+            width: 90%;
+            overflow-x: scroll;
+        }
+
+        &--title {
+            text-align: center;
+        }
+
+        &--form {
+            width: 90%;
+            @include boite(0px, auto);
+
+            @include flex(start, start) {
+                flex-direction: column;
+            }
+
+            &-label {
+                align-self: flex-start;
+                width: 80VW;
+                text-indent: 5px;
+                @include boite(0px, 5px);
+                font-size: medium;
+                font-weight: bold;
+
+                @include media('pc') {
+                    width: 60vw;
+                }
+            }
+
+            &-input {
+                background-color: $principaleBackgroundColor;
+
+                @include media('pc') {
+                    width: 60vw;
+                    height: 20px;
+                    border: none;
+                    border-bottom: 1px solid #1818e1;
+                    outline: none;
+                }
+
+                width: 80vw;
+                height: 20px;
+                border: none;
+                border-bottom: 1px solid #1818e1;
+                outline: none;
+            }
+
+            &-id {
+                display: none;
             }
         }
     }
