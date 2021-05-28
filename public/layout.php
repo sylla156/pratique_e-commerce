@@ -13,7 +13,7 @@
 <body>
 
     <?php require_once "layoutModule/header.php" ?>
-    <?php //require_once "layoutModule/carousel.php" ?>
+    <?php require_once "layoutModule/carousel.php" ?>
     <?php //require_once "layoutModule/article.php" ?>
 
 </body>

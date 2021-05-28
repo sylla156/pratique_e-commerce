@@ -18,7 +18,13 @@ class carousel {
      * @param {DOM} _carouselNextBtn - le btn qui sert pour faire avancer le carousel 
      * @param {DOM} _carouselPrevBtn - le btn qui sert a faie reculer le carousel
      */
-    constructor(_carouselMain, _carouselAllChild, _carouselNextBtn, _carouselPrevBtn, _carouselSelectorElement) {
+    constructor(
+        _carouselMain,
+        _carouselAllChild,
+        _carouselNextBtn,
+        _carouselPrevBtn,
+        _carouselSelectorElement
+        ) {
         this.carouselMAin = _carouselMain;
         this.carouselAllChild = _carouselAllChild;
         this.carouselNextBtn = _carouselNextBtn;
@@ -71,6 +77,7 @@ class carousel {
                 this.compteurOfCarousel = 0;
             }
             this.move(this.compteurOfCarousel);
+            console.log("ok");
         })
     }
 
@@ -88,9 +95,9 @@ class carousel {
         })
     }
 
-   /**
-    *  @description il ajoute les seletor element en fonction du nombre image
-    */
+    /**
+     *  @description il ajoute les seletor element en fonction du nombre image
+     */
     addSelectorElement() {
         let compt = this.numberElement;
         let element = undefined;
@@ -131,7 +138,8 @@ class carousel {
             if (childrenElement === childrenElementIndex) {
                 element.style.backgroundColor = '#63b0f4';
             } else if (childrenElement !== childrenElementIndex) {
-                element.style.backgroundColor = '#fff';                                                                                                                                                                                                                                                                                                                                                                                                                               }
+                element.style.backgroundColor = '#fff';
+            }
         }
     }
 
