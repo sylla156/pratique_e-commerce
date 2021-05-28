@@ -29,6 +29,7 @@ class Insert extends connexion
         } catch (\Throwable $th) {
             echo "erreur dans la class insert methode insereUser";
             echo $th->getMessage();
+            return false;
         }
     }
 
@@ -54,6 +55,7 @@ class Insert extends connexion
         } catch (\Throwable $th) {
             echo "erreur dans la class insert methode insereArticle";
             echo $th->getMessage();
+            return false;
         }
     }
 
@@ -75,6 +77,7 @@ class Insert extends connexion
         } catch (\Throwable $th) {
             echo "erreur dans la class insert methode insereCarousel";
             echo $th->getMessage();
+            return false;
         }
     }
 
@@ -94,11 +97,12 @@ class Insert extends connexion
                 ALTER TABLE `admin` auto_increment=1;"
             );
 
-            $go->execute(array($nom, $email,$pass));
+            $go->execute(array($nom, $email, $pass));
             return true;
         } catch (\Throwable $th) {
             echo "erreur dans la class insert methode insereAdmin";
             echo $th->getMessage();
+            return false;
         }
     }
 }

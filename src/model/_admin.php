@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\class\database\Delete;
 use App\class\database\Insert;
+use App\class\database\Search;
 use App\class\database\Take;
 use App\class\database\Update;
 
@@ -17,6 +18,16 @@ $title = 'article';
 $take = new Take();
 foreach ($_GET as $key => $value) {
     $title = $key;
+
+    for ($i = 0; $i < strlen($key); $i++) {
+        if ($key[$i] === '_') {
+            $searchTrue = true;
+            $searchMode = explode('_', $key);
+            $searchValue = $value;
+            $searchMode = $searchMode[0];
+        }
+    }
+
     switch ($key) {
         case 'user':
             $data = $take->takeElementAllUser();
@@ -30,9 +41,39 @@ foreach ($_GET as $key => $value) {
         case 'carousel':
             $data = $take->takeElementAllCarousel();
             break;
+        case $searchTrue === true:
+            $title = $searchMode;
+            $search = new Search();
+            switch ($searchMode) {
+                case 'user':
+                    $data = $search->searchElements($searchValue, $searchMode);
+                    $details = 'nom';
+                    break;
+                case 'article':
+                    $data = $search->searchElements($searchValue, $searchMode);
+                    $details = 'nom';
+                    break;
+                case 'admin':
+                    $data = $search->searchElements($searchValue, $searchMode);
+                    $details = 'nom';
+                    break;
+                case 'carousel':
+                    $data = $search->searchElements($searchValue, $searchMode);
+                    $details = "nom de l'image";
+                    break;
+                default:
+                    break;
+            }
+            break;
         default:
             $data = [];
+            require __DIR__ . DIRECTORY_SEPARATOR . "../../view/error.php";
+            die();
             break;
+    }
+
+    if ($data === []) {
+        $error = "rien de bon";
     }
 }
 if ($_POST != null) {
@@ -87,7 +128,7 @@ if ($_POST != null) {
                 $data = $take->takeElementAllCarousel();
                 break;
             default:
-                # code...
+                die();
                 break;
         }
     } elseif ($zone === 'add') {
@@ -111,7 +152,7 @@ if ($_POST != null) {
                 $data = $take->takeElementAllCarousel();
                 break;
             default:
-                # code...
+                die();
                 break;
         }
     }
