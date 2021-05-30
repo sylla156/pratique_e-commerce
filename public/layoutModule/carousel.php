@@ -8,9 +8,9 @@
             <div class="main__carousel--main">
                 <div class=main__carousel--main__btnSelectorCarousel">
                     <ul class="main__carousel--main__btnSelectorCarousel--parentSelectorElementOfCarousel">
-
                     </ul>
                 </div>
+
                 <ul class="main__carousel--main-parentElement">
                     <li class="main__carousel--main-parentElement_element">
                         <a href="./"><img src="./picture/carousel/pc0.jpg" alt="image"></a>
@@ -40,6 +40,7 @@
                         <a href="./"><img src="./picture/carousel/pc8.jpg" alt="image"></a>
                     </li>
                 </ul>
+
             </div>
 
             <div class="main__carousel--btnNextCarousel">

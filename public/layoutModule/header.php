@@ -74,36 +74,27 @@ if ($avis === false) { ?>
 === === le contenue de nav === ===
          === === === === === === === === === === -->
 
-        <div class="main__nav noClick">
-            <div class="main__nav--center">
-                <ul class="main__nav--center--parentList">
-                    <?php if (isset($userName)) { ?>
-                        <li class="main__nav--center--parentList-child ">
-                            <a href="/parametre" class="btnActive" style="padding: 20px 25px; margin: 5px;">
-                                parametre
-                            </a>
-                        </li>
-                        <p class="lineBr"></p>
-                        <li class="main__nav--center--parentList-child ">
-                            <a href="/deconnexion" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">
-                                deconnexion
-                            </a>
-                        </li>
-                    <?php } else { ?>
-                        <li class="main__nav--center--parentList-child ">
-                            <a href="/connexion" class="btnActive" style="padding: 20px 25px; margin: 5px;">
-                                connexion
-                            </a>
-                        </li>
-                        <p class="lineBr"></p>
-                        <li class="main__nav--center--parentList-child ">
-                            <a href="/inscription" class="btnDislabel" style="padding: 20px 25px; margin: 5px;">
-                                inscription
-                            </a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
+    <div class="main__nav noClick">
+        <div class="main__nav--center">
+            <ul class="main__nav--center--parentList">
+                <?php if (isset($userName)) { ?>
+                    <li class="main__nav--center--parentList-child ">
+                        <a href="/parametre" class="btnActive">parametre</a>
+                    </li>
+                    <p class="lineBr"></p>
+                    <li class="main__nav--center--parentList-child ">
+                        <a href="/deconnexion" class="btnDislabel">deconnexion</a>
+                    </li>
+                <?php } else { ?>
+                    <li class="main__nav--center--parentList-child ">
+                        <a href="/connexion" class="btnActive">connexion</a>
+                    </li>
+                    <p class="lineBr"></p>
+                    <li class="main__nav--center--parentList-child ">
+                        <a href="/inscription" class="btnDislabel">inscription</a>
+                    </li>
+                <?php } ?>
+            </ul>
         </div>
     </main>
     <!-- === === === === === === === === === ===

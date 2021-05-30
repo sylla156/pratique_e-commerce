@@ -23,12 +23,13 @@ body {
         @include flex(space-around);
         @include boite(auto, 0px);
         position: fixed;
-        height: 65px;
         z-index: 10;
+        top: 0;
+        height: 65px;
         width: 100vw;
 
         @include media('mobile') {
-            height: 140px;
+            height: 26vh;
             display: grid;
             grid-template-columns: repeat(1fr, 5);
             grid-template-rows: repeat(1fr, 2);
@@ -115,8 +116,7 @@ body {
                 width: 20%;
 
                 @include media('mobile') {
-                    width: 18%;
-                    font-size: 0.8em;
+                    width: 25%;
                 }
             }
 
@@ -177,10 +177,11 @@ body {
         color: $principaleTextColor;
         transition: all 0.6s;
         position: fixed;
+        top: 0;
         @include boite(0px, 65px 0px 0px 0px);
 
         @include media('mobile') {
-            @include boite(0px, 140px 0px 0px 0px);
+            @include boite(0px, 26vh 0px 0px 0px);
         }
 
         &--parentList {
@@ -206,10 +207,11 @@ body {
         color: $principaleTextColor;
         transition: all 0.6s;
         position: fixed;
+        top: 0;
         @include boite(0px, 65px 0px 0px 0px);
 
         @include media('mobile') {
-            @include boite(0px, 140px 0px 0px 0px);
+            @include boite(0px, 26vh 0px 0px 0px);
         }
 
         right: 0;
@@ -237,9 +239,15 @@ body {
 
 
     &__carousel {
+        z-index: 1;
         position: relative;
-        top: 65px;
-        z-index: -1;
+        @include boite;
+        @include boite(0px, 65px 0px 0px 0px);
+
+        @include media('mobile') {
+            @include boite(0px, 28vh 0px 0px 0px);
+        }
+
 
         @include flex {
             flex-direction: row;
@@ -256,7 +264,7 @@ body {
 
         @include media('mobile') {
             @include dimension(100vw, 50vh);
-            top: 150px;
+
         }
 
         // background-color: #000;
@@ -282,7 +290,8 @@ body {
 
                 ul {
                     @include flex;
-
+                    width: 50%;
+                    @include boite(5px,auto);
                     li {
                         @include boite(8px, 5px);
                         border-radius: 100%;
@@ -338,6 +347,16 @@ body {
     form {
         height: 40vh;
         width: 50vw;
+        margin-top: 20vh !important;
+        h3 {
+            @include boite(10px);
+        }
+
+        select {
+            display: none;
+            align-self: flex-start;
+            width: 40%;
+        }
 
         h3 {
             @include boite(10px);
@@ -387,9 +406,11 @@ body {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     width: 100vw;
     background-color: $secondaryBackgroundColor;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
 
     &__items {
         display: block;

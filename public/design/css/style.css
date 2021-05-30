@@ -4,7 +4,7 @@
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
   .icone {
-    width: 13px;
+    width: 18px;
   }
 }
 
@@ -20,6 +20,8 @@
   text-decoration: none;
   background-color: #063884;
   border: inherit;
+  padding: 20px 25px;
+  margin: 5px;
   font-size: medium;
   font-style: italic;
   transition: all 0.6;
@@ -30,9 +32,11 @@
 }
 
 .btnDislabel {
+  padding: 20px 25px;
+  margin: 5px;
   text-decoration: none;
   text-transform: capitalize;
-  border: 1px solid #063884;
+  border: 2px solid #063884;
   border: 20%;
   color: #063884;
   font-size: medium;
@@ -135,14 +139,15 @@ body {
   padding: auto;
   margin: 0px;
   position: fixed;
-  height: 65px;
   z-index: 10;
+  top: 0;
+  height: 65px;
   width: 100vw;
   background-color: #ffffff;
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
   .main__header {
-    height: 140px;
+    height: 26vh;
     display: grid;
     grid-template-columns: repeat(1fr, 5);
     grid-template-rows: repeat(1fr, 2);
@@ -222,8 +227,7 @@ body {
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
   .main__header--form input:nth-child(2) {
-    width: 18%;
-    font-size: 0.8em;
+    width: 25%;
   }
 }
 .main__header--basket {
@@ -284,13 +288,14 @@ body {
   color: #000000;
   transition: all 0.6s;
   position: fixed;
+  top: 0;
   padding: 0px;
   margin: 65px 0px 0px 0px;
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
   .main__category {
     padding: 0px;
-    margin: 140px 0px 0px 0px;
+    margin: 26vh 0px 0px 0px;
   }
 }
 .main__category--parentList {
@@ -313,6 +318,7 @@ body {
   color: #000000;
   transition: all 0.6s;
   position: fixed;
+  top: 0;
   padding: 0px;
   margin: 65px 0px 0px 0px;
   right: 0;
@@ -321,7 +327,7 @@ body {
 @media all and (max-width: 680px) and (min-width: 0px) {
   .main__nav {
     padding: 0px;
-    margin: 140px 0px 0px 0px;
+    margin: 26vh 0px 0px 0px;
   }
 }
 .main__nav--center {
@@ -345,14 +351,23 @@ body {
   list-style: none;
 }
 .main__carousel {
+  z-index: 1;
   position: relative;
-  top: 65px;
-  z-index: -1;
+  padding: 0px;
+  margin: 0px;
+  padding: 0px;
+  margin: 65px 0px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 6px;
+}
+@media all and (max-width: 680px) and (min-width: 0px) {
+  .main__carousel {
+    padding: 0px;
+    margin: 28vh 0px 0px 0px;
+  }
 }
 @media all and (max-width: 1800px) and (min-width: 1025px) {
   .main__carousel {
@@ -370,7 +385,6 @@ body {
   .main__carousel {
     width: 100vw;
     height: 50vh;
-    top: 150px;
   }
 }
 .main__carousel--main {
@@ -400,6 +414,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  padding: 5px;
+  margin: auto;
 }
 .main__carousel--main div ul li {
   padding: 8px;
@@ -457,6 +474,7 @@ body {
 .form form {
   height: 40vh;
   width: 50vw;
+  margin-top: 20vh !important;
   padding: 100px;
   margin: 0px;
   background-color: #ffffff;
@@ -464,6 +482,15 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.form form h3 {
+  padding: 10px;
+  margin: 0px;
+}
+.form form select {
+  display: none;
+  align-self: flex-start;
+  width: 40%;
 }
 .form form h3 {
   padding: 10px;
@@ -500,9 +527,11 @@ body {
   margin: 100px 0px 0px 0px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   width: 100vw;
   background-color: #ffffff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
 }
 @media all and (max-width: 680px) and (min-width: 0px) {
   .article {
