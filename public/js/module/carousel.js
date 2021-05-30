@@ -24,7 +24,7 @@ class carousel {
         _carouselNextBtn,
         _carouselPrevBtn,
         _carouselSelectorElement
-        ) {
+    ) {
         this.carouselMAin = _carouselMain;
         this.carouselAllChild = _carouselAllChild;
         this.carouselNextBtn = _carouselNextBtn;
@@ -139,6 +139,7 @@ class carousel {
                 element.style.backgroundColor = '#63b0f4';
             } else if (childrenElement !== childrenElementIndex) {
                 element.style.backgroundColor = '#fff';
+
             }
         }
     }
