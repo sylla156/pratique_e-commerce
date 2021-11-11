@@ -1,0 +1,127 @@
+/// la class destiner au icone
+/// leur donne par default une taille
+// et comme cursor pointer
+%icone {
+    @include media('mobile') {
+        width: 18px;
+    }
+
+    width: 21px;
+    cursor: pointer;
+}
+
+/// pour rendre le liens simple
+%linkNoActive {
+    color: $principaleLinkColor;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/// un simple btn blue
+%btnActive {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    background-color: $btnColor;
+    border: inherit;
+    @include boite(20px 25px, 5px);
+    font-size: medium;
+    font-style: italic;
+    transition: all 0.6;
+    &:hover {
+        transform: scale(0.98);
+        border-radius: (5px)
+    }
+}
+
+/// pour le btn transparent
+%btnDislabel {
+    @include boite(20px 25px, 5px);
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 2px solid $btnColor;
+    border: 20%;
+    color: $btnColor;
+    font-size: medium;
+    font-style: italic;
+    transition: all 0.6;
+
+    &:hover {
+        transform: scale(0.98);
+        border-radius: (5px)
+    }
+}
+
+/// pour le btn de supression
+%btnDelete {
+    background-color: red;
+    color: black;
+}
+
+/// c'est pour les hr pour lui donner un design voulue
+%lineSimple {
+    @include boite;
+    height: 1px;
+    width: 80%;
+    border-top: 1px solid black;
+}
+
+/// ici c'est un br aveec une ligne hr
+%lineBr {
+    @include boite(0px 30px);
+    height: 1px;
+    width: 40%;
+    border-top: 1px solid black;
+}
+
+/// c'est le slide moi j'utlise noClick pour le rendre invisible
+%noClick {
+    display: none;
+    width: 0px;
+    @include boite;
+}
+
+/// c'est le contrait de noClick celui si permet de le rendre visible
+%click {
+    display: block;
+
+    @include media('pc') {
+        width: 20vw !important;
+    }
+
+    @include media('tablette') {
+        width: 40vw !important;
+    }
+
+    @include media('mobile') {
+        width: 90vw !important;
+        height: 76vh;
+    }
+}
+
+/// en cas echec
+%alertDanger {
+    border: 1px solid $alertDangerBorderColor;
+    background-color: $alertDangerBackgroundColor;
+    color: $alertDangerTextColor;
+    @include boite(10px 10px, 10px 30px);
+    text-align: center;
+    vertical-align: center;
+
+
+}
+
+/// en cas de success
+%alertGood {
+    border: 1px solid $alertGoodBorderColor;
+    background-color: $alertGoodBackgroundColor;
+    color: $alertGoodTextColor;
+    @include boite(10px 20px, 10px 30px);
+    text-align: justify;
+}
+
+/// pour rendre visible un display block
+%visible {
+    display: block !important;
+
+}

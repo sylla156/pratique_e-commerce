@@ -1,0 +1,45 @@
+.icone {
+    @extend %icone;
+}
+
+.linkNoActive {
+    @extend %linkNoActive;
+}
+
+.lineSimple {
+    @extend %lineSimple;
+}
+.lineBr {
+    @extend %lineBr;
+}
+.noClick {
+    @extend %noClick;
+}
+
+.click {
+    @extend %click;
+}
+
+.btnActive {
+    @extend %btnActive;
+}
+
+.btnDislabel {
+    @extend %btnDislabel
+}
+
+.btnDelete {
+    @extend %btnDelete;
+}
+
+.alertDanger {
+    @extend  %alertDanger;
+}
+
+.alertGood {
+    @extend %alertGood;
+}
+
+.visible {
+    @extend %visible;
+}

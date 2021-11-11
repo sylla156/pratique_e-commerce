@@ -1,0 +1,705 @@
+@import "./module/_mixin";
+@import "./module/variable";
+@import "./module/function";
+@import "./module/placeholder";
+@import "./module/classAnonyme";
+//=== === === === === === === === === ===
+
+body {
+    @include boite(0px, 0px);
+    background-color: $principaleBackgroundColor;
+    color: $principaleTextColor;
+    overflow-x: hidden;
+}
+
+//=== === === === === === === === === ===
+
+
+.main {
+    @include boite(0px, 0px);
+    position: relative;
+
+    &__header {
+        @include flex(space-around);
+        @include boite(auto, 0px);
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        height: 65px;
+        width: 100vw;
+
+        @include media('mobile') {
+            height: 26vh;
+            display: grid;
+            grid-template-columns: repeat(1fr, 5);
+            grid-template-rows: repeat(1fr, 2);
+            grid-template-areas: "btnCategory title title basket btnNav"
+                "form form form form form";
+        }
+
+
+
+
+        background-color: $secondaryBackgroundColor;
+
+        &--btnCategory {
+            flex: 1;
+            grid-area: btnCategory;
+            border-radius: 100%;
+
+
+            img {
+                @include boite(15px 10px 10px 10px, 10px);
+                transition: transform 0.3s;
+
+                &:hover {
+                    background-color: $principaleBackgroundColor;
+                }
+            }
+        }
+
+        &--title {
+            flex: 1;
+            grid-area: title;
+            font-size: 2.1vw;
+
+            @include media('mobile') {
+                font-size: 4vw;
+            }
+
+            @include boite;
+        }
+
+        &--form {
+            flex: 4;
+            background-color: $principaleBackgroundColor;
+            border-radius: 20px;
+
+            @include media('mobile') {
+                grid-area: form;
+                @include boite(10px 0px, 10px 0px)
+            }
+
+            input {
+                outline: none;
+                border: none;
+                height: 30px;
+                border-radius: 10px;
+                background-color: $principaleBackgroundColor;
+            }
+
+            span {
+                @include boite(2px);
+                border-left: 1px solid black;
+            }
+
+            input:nth-child(1) {
+                width: 75%;
+
+                @include media('mobile') {
+                    width: 70%;
+                }
+
+                &::placeholder {
+                    color: grey;
+                    font-style: italic;
+                    text-indent: 20px;
+
+                    @include media('mobile') {
+                        font-size: 0.8em;
+                        height: 50%;
+                    }
+                }
+            }
+
+            input:nth-child(2) {
+                width: 20%;
+
+                @include media('mobile') {
+                    width: 25%;
+                }
+            }
+
+        }
+
+        &--basket {
+            flex: 1;
+            grid-area: basket;
+            @include boite;
+
+            img {
+                @include flex;
+                @include boite(0px 30%, 0px);
+            }
+        }
+
+        &--btnNav {
+            flex: 1;
+            grid-area: btnNav;
+            @include boite;
+            @include flex(space-around, center);
+            cursor: pointer;
+
+            img {
+                @include flex(flex-end);
+                @include boite(0px 30%, 0px);
+            }
+
+            &-userName,
+            &-userImg {
+                @include boite(10px, 0);
+            }
+
+            &-userName {
+                font-weight: 700;
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                font-style: italic;
+                text-transform: capitalize;
+                @include boite(0px 0px 0px 10px, 0);
+            }
+
+            &-userImg {
+                @include boite(initial, initial);
+                @include boite(20px);
+                border-radius: 50%;
+                background-color: grey;
+            }
+
+        }
+    }
+
+
+    &__category {
+        z-index: 2;
+        width: 0px;
+        background-color: $secondaryBackgroundColor;
+        color: $principaleTextColor;
+        transition: all 0.6s;
+        position: fixed;
+        top: 0;
+        @include boite(0px, 65px 0px 0px 0px);
+
+        @include media('mobile') {
+            @include boite(0px, 26vh 0px 0px 0px);
+        }
+
+        &--parentList {
+            opacity: 0;
+            @include boite(10px, 10px);
+
+            @include flex {
+                flex-direction: column;
+                row-gap: 15px;
+            }
+
+            &-child {
+                list-style: none;
+            }
+        }
+    }
+
+
+    &__nav {
+        z-index: 2;
+        width: 0px;
+        background-color: $secondaryBackgroundColor;
+        color: $principaleTextColor;
+        transition: all 0.6s;
+        position: fixed;
+        top: 0;
+        @include boite(0px, 65px 0px 0px 0px);
+
+        @include media('mobile') {
+            @include boite(0px, 26vh 0px 0px 0px);
+        }
+
+        right: 0;
+        height: 40vh !important;
+
+        &--center {
+            @include flex;
+            @include boite(10px, 10px);
+
+            &--parentList {
+                opacity: 0;
+                @include boite(10px, 10px);
+
+                @include flex {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+
+                &-child {
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+
+    &__carousel {
+        z-index: 1;
+        position: relative;
+        @include boite;
+        @include boite(0px, 65px 0px 0px 0px);
+
+        @include media('mobile') {
+            @include boite(0px, 28vh 0px 0px 0px);
+        }
+
+
+        @include flex {
+            flex-direction: row;
+            gap: 6px;
+        }
+
+        @include media('pc') {
+            @include dimension(100vw, 80vh);
+        }
+
+        @include media('tablette') {
+            @include dimension(100vw, 50vh);
+        }
+
+        @include media('mobile') {
+            @include dimension(100vw, 50vh);
+
+        }
+
+        // background-color: #000;
+        &--main {
+            @include boite;
+            overflow: hidden;
+
+            @include media('pc') {
+                @include dimension(75vw, 70vh);
+            }
+
+            @include media('tablette') {
+                @include dimension(85vw, 40vh);
+
+            }
+
+            @include media('mobile') {
+                @include dimension(95vw, 45vh);
+            }
+
+            // pour les selector du carousel les points rond
+            div {
+
+                ul {
+                    @include flex;
+                    width: 50%;
+                    @include boite(5px,auto);
+                    li {
+                        @include boite(8px, 5px);
+                        border-radius: 100%;
+                        background-color: #fff;
+                    }
+                }
+            }
+
+            //pour les element du carousel
+            ul {
+                @include boite;
+                @include flex(flex-start);
+
+                li {
+                    list-style: none;
+                    @include flex;
+                }
+
+                transition: all 1s;
+
+                a img {
+                    @include media('pc') {
+                        @include dimension(75vw, 70vh);
+                    }
+
+                    @include media('tablette') {
+                        @include dimension(85vw, 40vh);
+
+                    }
+
+                    @include media('mobile') {
+                        @include dimension(95vw, 45vh);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form {
+    @include boite;
+
+    @include flex {
+        flex-direction: column;
+    }
+
+    ;
+    height: 100vh;
+    width: 100vw;
+    @include flex;
+    overflow: hidden;
+
+    form {
+        height: 40vh;
+        width: 50vw;
+        margin-top: 20vh !important;
+        h3 {
+            @include boite(10px);
+        }
+
+        select {
+            display: none;
+            align-self: flex-start;
+            width: 40%;
+        }
+
+        h3 {
+            @include boite(10px);
+        }
+
+        select {
+            display: none;
+            align-self: flex-start;
+            width: 40%;
+        }
+
+        @include media('mobile') {
+            @include boite(50px);
+        }
+
+        @include boite(100px);
+        background-color: $secondaryBackgroundColor;
+
+        @include flex {
+            flex-direction: column;
+        }
+
+        input {
+
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+
+            @include media('mobile') {
+                width: 50vw;
+                height: 20px;
+            }
+
+            height: 20px;
+            width: 60vw;
+            background-color: $principaleBackgroundColor;
+        }
+    }
+}
+
+.article {
+    @include boite(0px, 100px 0px 0px 0px);
+
+    @include media('mobile') {
+        @include boite(0px, 160px 0px 0px 0px);
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: $secondaryBackgroundColor;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
+
+    &__items {
+        display: block;
+        @include boite(0px, 1vw);
+        width: 23vw;
+
+        @include media('mobile') {
+            @include boite(0px, 5px 0px 0px 1vw);
+            width: 32vw;
+        }
+
+        &--img {
+            width: 23vw;
+            height: 12vw;
+
+            @include media('mobile') {
+                width: 32vw;
+                height: 23vw;
+                @include boite;
+            }
+        }
+
+        &--price {
+            @include boite;
+
+            @include media('mobile') {
+                font-size: 0.6em;
+            }
+
+        }
+
+        &--decscribe {
+            // color: red;
+            @include boite;
+
+            @include media('mobile') {
+                font-size: 0.5em;
+            }
+        }
+
+        &--btn {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            @include boite(0px, 15px 0px);
+
+            a {
+                font-size: 0.9rem;
+                @include boite(5px, 0px);
+
+                @include media('mobile') {
+                    font-size: 0.6em;
+                }
+            }
+        }
+
+    }
+
+}
+
+.admin {
+    @include boite;
+
+    &__header {
+        @include flex(space-between);
+        background-color: $secondaryBackgroundColor;
+        width: 100vw;
+
+        p {
+            @include boite(10px, 10px);
+        }
+
+        p:first-child {
+            @include boite(10px, 0px 0px 0px 20px);
+
+            a {
+                color: $secondaryBackgroundColor;
+            }
+        }
+    }
+
+    &__section {
+        background-color: $secondaryBackgroundColor;
+        width: 70%;
+        @include boite(20px, 140px auto);
+
+        &--title {
+            text-align: center;
+        }
+
+        &--article {
+            @include flex(center, flex-start) {
+                flex-direction: column;
+            }
+
+            &-all {
+                @include boite(20px);
+                border-bottom: 1px solid black;
+                background-color: $principaleBackgroundColor;
+                width: 95%;
+                transition: all 0.4s;
+            }
+
+            &-all:hover {
+                color: #5628fe;
+                border-bottom: 1px solid #5628fe;
+                box-shadow: 3px 5px 6px;
+            }
+        }
+    }
+
+    &__param {
+        background-color: $secondaryBackgroundColor;
+        width: 70%;
+        @include boite(20px, 140px auto);
+
+        @include media('tablette') {
+            width: 90%;
+        }
+
+        @include media('mobile') {
+            width: 90%;
+            overflow-x: scroll;
+        }
+
+        &--title {
+            text-align: center;
+        }
+
+        &--form {
+            @include boite;
+
+            input {
+                width: 20%;
+            }
+
+            input:nth-child(1) {
+                width: 70% !important;
+            }
+        }
+
+        &--btnAdd {
+            a {
+                @include boite(10px 20px,0px);
+            }
+        }
+
+        &--table {
+            width: 100%;
+            overflow-x: scroll;
+
+            thead {
+                th {
+                    text-align: center;
+                }
+            }
+
+            tbody {
+                tr {
+                    @include boite(0px, 40px);
+
+                    td {
+                        text-align: center;
+                        @include boite(10px, 0px);
+                    }
+                }
+            }
+        }
+    }
+
+    &__update {
+        background-color: $secondaryBackgroundColor;
+        width: 70%;
+        @include boite(20px, 140px auto);
+
+        @include media('tablette') {
+            width: 90%;
+        }
+
+        @include media('mobile') {
+            width: 90%;
+            overflow-x: scroll;
+        }
+
+        &--title {
+            text-align: center;
+        }
+
+        &--form {
+            width: 90%;
+            @include boite(0px, auto);
+
+            @include flex(start, start) {
+                flex-direction: column;
+            }
+
+            &-label {
+                align-self: flex-start;
+                width: 80VW;
+                text-indent: 5px;
+                @include boite(0px, 5px);
+                font-size: medium;
+                font-weight: bold;
+
+                @include media('pc') {
+                    width: 60vw;
+                }
+            }
+
+            &-input {
+                background-color: $principaleBackgroundColor;
+
+                @include media('pc') {
+                    width: 60vw;
+                    height: 20px;
+                    border: none;
+                    border-bottom: 1px solid #1818e1;
+                    outline: none;
+                }
+
+                width: 80vw;
+                height: 20px;
+                border: none;
+                border-bottom: 1px solid #1818e1;
+                outline: none;
+            }
+        }
+    }
+
+    &__add {
+        background-color: $secondaryBackgroundColor;
+        width: 70%;
+        @include boite(20px, 140px auto);
+
+        @include media('tablette') {
+            width: 90%;
+        }
+
+        @include media('mobile') {
+            width: 90%;
+            overflow-x: scroll;
+        }
+
+        &--title {
+            text-align: center;
+        }
+
+        &--form {
+            width: 90%;
+            @include boite(0px, auto);
+
+            @include flex(start, start) {
+                flex-direction: column;
+            }
+
+            &-label {
+                align-self: flex-start;
+                width: 80VW;
+                text-indent: 5px;
+                @include boite(0px, 5px);
+                font-size: medium;
+                font-weight: bold;
+
+                @include media('pc') {
+                    width: 60vw;
+                }
+            }
+
+            &-input {
+                background-color: $principaleBackgroundColor;
+
+                @include media('pc') {
+                    width: 60vw;
+                    height: 20px;
+                    border: none;
+                    border-bottom: 1px solid #1818e1;
+                    outline: none;
+                }
+
+                width: 80vw;
+                height: 20px;
+                border: none;
+                border-bottom: 1px solid #1818e1;
+                outline: none;
+            }
+
+            &-id {
+                display: none;
+            }
+        }
+    }
+}

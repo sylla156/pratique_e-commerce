@@ -1,0 +1,26 @@
+{
+    "name": "sylla/pratique_e-commerce",
+    "description": "mise en pratique de mes connaissance",
+    "authors": [
+        {
+            "name": "sylla",
+            "email": "s67986601@gmail.com"
+        }
+    ],
+    "scripts": {
+        "serveur": "php -S localhost:8000 -d display_errors=1 -t public/"
+    }
+    ,
+    "autoload" : {
+        "psr-4" : {
+            "App\\" : "src" 
+        }
+    },
+    "require": {
+        "filp/whoops": "^2.12",
+        "symfony/var-dumper": "^5.2",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
+        "altorouter/altorouter": "^2.0"
+    }
+}

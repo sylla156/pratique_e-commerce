@@ -1,0 +1,25 @@
+{
+  "name": "pratique_e-commerce",
+  "version": "1.0.0",
+  "description": "mise en patique de mes connaissance",
+  "main": "index.js",
+  "scripts": {
+    "test": "ls",
+    "sass": "sudo sass public/design/scss/style.scss public/design/css/style.css --watch",
+    "sassdocs": "sudo sassdoc public/design/scss/module"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylla156/pratique_e-commerce.git"
+  },
+  "author": "sylla ibrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sylla156/pratique_e-commerce/issues"
+  },
+  "homepage": "https://github.com/sylla156/pratique_e-commerce#readme",
+  "dependencies": {
+    "npm": "^7.12.1",
+    "sassdoc": "^2.7.3"
+  }
+}

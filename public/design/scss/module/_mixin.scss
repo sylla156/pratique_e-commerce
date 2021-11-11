@@ -1,0 +1,42 @@
+/// @author sylla ibrahim
+/// @param {string} $justifyContent [center] pour le justify content
+/// @param {string} $alignItems [center] pour align items
+@mixin flex($justifyContent: center, $alignItems: center) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    @content;
+}
+
+
+// === === === === === === === === === ===
+
+
+/// @author sylla ibrahim
+/// @param {int} $padding [0px] pour le padding
+/// @param {int} $margin [0px] pour le margin
+@mixin boite($padding: 0px, $margin:0px) {
+    padding: $padding;
+    margin: $margin;
+}
+
+
+// === === === === === === === === === ===
+
+
+
+/// @author sylla ibrahim
+/// @param {string} $plateforme elle specifie l'appareil qui sera utiliser
+@mixin media($plateforme) {
+    @media all and (max-width: maxMedia($plateforme)) and (min-width: minMedia($plateforme)) {
+        @content;
+    }
+}
+
+/// @author sylla ibrahim
+/// @param  {int} $width la largeur 
+/// @param {int} $heigth la hauteur 
+@mixin dimension($width: auto,$heigth: auto) {
+    width: $width;
+    height: $heigth;
+}
